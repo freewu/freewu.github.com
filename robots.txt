@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://freewu.github.com/sitemap.xml 
