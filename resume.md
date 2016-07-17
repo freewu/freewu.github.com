@@ -22,6 +22,18 @@
 
 ### 工作经历
 
+#### 2016.03 - now 迅雷(深圳) 资深PHP开发工程师
+	
+	* 使用技术：php / mysql / codeigniter / openresty / ssdb / markdown / svn 
+	
+	# 2016.3 - now  jiuwo直播平台
+		
+	负责jiuwo直播平台的架构&开发(2 php，2 前端)
+	负责jiuwo直播平台付费系统(礼物，贵族，守护),勋章系统的开发
+	使用openresty 设计平台聊天&通信系统
+	领导团队使用markdown完善开发文档
+	
+
 #### 2013.04 - 2016.01 Tencent (深圳) 运营开发工程师
 	
 	* 使用技术：php / mysql / codeigniter / bash / jquery / wikipedia  / jqueryui / highchart/ timeline.js / postgresql / cgi / markdown / svn 
