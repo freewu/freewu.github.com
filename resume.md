@@ -22,7 +22,7 @@
 
 ### 工作经历
 
-#### 2016.03 - now 迅雷(深圳) 资深PHP开发工程师
+#### 2016.03 - 2016.08 迅雷(深圳) 资深PHP开发工程师
 	
 	* 使用技术：php / mysql / codeigniter / openresty / ssdb / markdown / svn 
 	
@@ -54,7 +54,7 @@
 	熟悉项目是使用的 codeigniter & highchart & jqueryui 开源组件，熟悉jquery插件开发
 	
 	
-#### 2009.05 - 2013.03 Shopex(上海) 高级系统开发工程师
+#### 2009.01 - 2013.03 Shopex(上海) 高级系统开发工程师
 
 	* 使用技术： php / mysql / erlang / memcache / erlang / mongodb / mootools / phpunit / python / hudson / puppet / ecshop / t2t / tsung / ab / svn / git 
 
@@ -86,13 +86,6 @@
 	
 	熟悉taobao api调用，KISSY框架的使用
 
-#### 2008.12 - 2009.05 KMJ(上海) PHP开发工程师
-
-	* 使用技术：php / mysql / jquery / uchome / svn / ecshop
-	
-	主导基于uchome二次开发的动漫社区的开发
-	主导基于ecshop二次开发的动漫周边商城的开发
-
 
 #### 2008.02 - 2008.12 Gooyaa(深圳) PHP开发工程师
 
@@ -118,3 +111,4 @@
 	2007 大学英语等级考试 四级(428)
 	2007 计算机技术与软件专业技术资格(水平)考试 软件设计师
 	2008 南昌大学管理学学士
+	
