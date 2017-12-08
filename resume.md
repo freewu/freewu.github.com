@@ -29,7 +29,7 @@
 #### 2016.08 - now 中集电商(深圳) 架构师
 	
 ```
-	* 使用技术：PHP / Mysql / Easyui / Highchart / Yaf  / Java / Markdown / Svn 
+	* 使用技术：PHP / Mysql / Easyui / Highchart / Yaf  / Java / Markdown / SVN 
 	
 	# 2016.8 - now 数据平台  
 		
@@ -39,12 +39,25 @@
 	负责网点规划系统的开发 ( 提供布点建议&竞品分析 )
 ```	
 
-#### 2013.04 - 2016.08 Tencent(深圳) 运营开发工程师
+#### 2016.03 - 2016.08 迅雷(深圳) 资深PHP开发工程师
+
+```	
+	* 使用技术：php / mysql / codeigniter / openresty / ssdb / markdown / svn 
+
+ 	# 2016.03 - 2016.08 jiuwo直播平台 
+  		
+ 	负责jiuwo直播平台的架构&开发(2 php，2 前端)
+ 	负责jiuwo直播平台付费系统(礼物，贵族，守护),勋章系统的开发
+ 	使用openresty 设计平台聊天&通信系统
+ 	领导团队使用markdown完善开发文档
+```
+
+#### 2013.04 - 2016.01 Tencent(深圳) 运营开发工程师
 
 ```	
 	* 使用技术：PHP / Mysql / Codeigniter / Bash / jQuery / wikipedia  / jqueryui / highchart/ timeline.js / postgresql / cgi / markdown / svn 
 	
-	# 2014.09 - 2016.08 互娱运营部(MSDK)
+	# 2014.09 - 2016.01 互娱运营部(MSDK)
 		
 	负责移动游戏管理平台前台&后端的开发&重构(4 php 1 设计)
 	负责移动游戏排期系统的开发
