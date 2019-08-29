@@ -17,43 +17,40 @@
 	熟悉带领团队进行工作,根据成员不同的能力和兴趣给予不同的任务分配和职业成长
 	熟悉在 *nix 环境下进行相关开发
 	能快速理解需求,并完成相关的系统设计和架构
-
 ```
 
 ### 工作经历
 
-#### 2018.03 - now 腾梭智能(深圳) 架构师	
+#### 2018.03 - 2019.07 腾梭智能(深圳) 架构师	
 ```
-	* 使用技术：PHP / Yii / Mysql / Vue.js / Bash / Java / Markdown / Git / Python
+	* 风控系统 / 特征系统 / 实时反欺诈 
 	
-	# 2016.03 - now 风控开发组  
+	# 2018.03 - 2019.07 风控开发组  
 		
 	负责风控反欺诈平台搭建&开发(4 php)
 	负责风控反欺诈平台在多家银行网贷系统项目落地
 	负责实时风控反欺诈平台的管理台开发&行内落地
 	负责各类第三方数据接入&联调方案
-
 ```	
 
 
 #### 2016.03 - 2018.03 中集电商(深圳) 架构师
 	
 ```
-	* 使用技术：PHP / Yaf / Mysql / Easyui / Highchart / Java / Markdown / SVN / Python
+	* BI平台 / OLAP / 数据采集 / 数据清洗 / 数据分析 / 审批引擎
 	
-	# 2016.03 - now 数据平台  
+	# 2016.03 - 2018.03 数据平台  
 		
 	负责数据平台前端的搭建&开发(2 php 3 java)
 	负责自定义报表系统的开发 ( 使原来一个报表开发需要半天缩短到10分钟 )
 	负责审批流引擎的开发
 	负责网点规划系统的开发 ( 提供布点建议&竞品分析 )
-
 ```	
 
 #### 2013.04 - 2016.02 Tencent(深圳) 运营开发工程师
 
 ```	
-	* 使用技术：PHP / Mysql / Codeigniter / Bash / jQuery / wikipedia  / jqueryui / highchart/ timeline.js / postgresql / cgi / markdown / svn 
+	* 监控平台 / 系统重构 / 系统迁移 / APP发布平台 
 	
 	# 2014.09 - 2016.02 互娱运营部(MSDK)
 		
@@ -69,15 +66,14 @@
 	主导原 C# 系统代码迁移
 	参与微信平台的监控系统开发
 	熟悉项目是使用的 codeigniter & highchart & jqueryui 开源组件，熟悉 jquery 插件开发
-
 ```	
 	
 #### 2009.01 - 2013.03 Shopex(上海) 高级系统开发工程师
 
 ```
-	* 使用技术： php / mysql / erlang / memcache / erlang / mongodb / mootools / phpunit / python / hudson / puppet / ecshop / t2t / tsung / ab / svn / git 
+	* B2B / B2C / 商城系统 / 虚拟物品交易系统 / PaaS平台 / ECshop
 
-	# 2009.01 - 2010.12 B2B1.22 - B2B1.26 & B2C分销模块
+	# 2009.01 - 2010.12 B2B1.22 - B2B
 	
 	熟悉shopex4.8系列 MVC 框架,熟悉 mootools 框架,熟悉电子商务销售前端业务流程，熟悉各种支付接口
 	熟悉项目开发管理 ( 带领6个php同时进行项目开发 ),熟悉项目打包发布
@@ -105,22 +101,20 @@
 	# 2013.2 - 2013.3 云猫
 	
 	熟悉 taobao api调用，KISSY 框架的使用
-
 ```
 
 
 #### 2008.02 - 2008.12 Gooyaa(深圳) PHP开发工程师
 ```
-	* 使用技术：php / mysql / zend framework /jquery / uchome / ucenter / discuz / lucene / svn 
+	* CMS系统 / Discuz二次开发 / SNS
 	
 	主导整个爬虫后台的 CMS 管理系统的开发
 	使用 uchome + ucenter 整合多个论坛和户外sns系统
-
 ```
 
 #### 2007.06 - 2007.11 Baituo(南昌) ASP/PHP开发工程师
 ```
-	* 使用技术: php / asp / mysql / access / html / javascript / css 
+	* 企业建站 / 政务系统 / Discuz二次开发 
 
 	主要使用asp + access & php + mysql 从事企业建站相关工作
 	期间主导开发了5个企业站和1个政务系统
