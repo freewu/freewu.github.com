@@ -1,18 +1,18 @@
 ### 基本信息
-```
-	{
-		Name: 伍彬
-		Birth Day: 1982-06
-		Email: bluefrog.wu@gmail.com
-		Mobile: 19907970927
-		Blog: http://bluefrog.cnblogs.com
-		Github: freewu
-	}
+```json
+{
+	"Name": "伍彬",
+	"BirthDay": "1982-06",
+	"Email": "bluefrog.wu@gmail.com",
+	"Mobile": "19907970927",
+	"Blog": "http://bluefrog.cnblogs.com",
+	"Github": "freewu"
+}
 ```
 
 ### 自我介绍
 ```
-	15年项目开发经验,可快速掌握各种语言应用于项目开发中
+	16年项目开发经验,可快速掌握各种语言应用于项目开发中
 	熟悉带领团队进行工作,根据成员不同的能力和兴趣给予不同的任务分配和职业成长
 	熟悉在 *nix 环境下进行相关开发
 	能快速理解需求,并完成相关的系统设计和架构
@@ -21,22 +21,34 @@
 ### 掌握技能
 
 ```
-	php 		15年 项目架构能力 & 框架定制 & 扩展开发
-	javascript  15年 vue / react / electron 项目开发能力
-	go 			 3年 项目架构能力 & 框架开发能力 
-	java 		 5年 基于 spring-boot 的项目架构 & 基于 sprint-cloud 的项目开发
+	PHP 		15年 项目架构能力 & 框架定制 & 扩展开发
+	Javascript  16年 vue / react / electron 项目开发能力
+	Golang 		4年 项目架构能力 & 框架开发能力 
+	Java 		6年 基于 spring-boot 的项目架构 & 基于 sprint-cloud 的项目开发
+	Rust		1年 项目架构能力
 ```
 
 ### 工作经历
 
-#### 2020.11 - 2022.06 深圳阜嘉科技有限公司
+#### 2022.08 - now 宁波中集物流装备有限公司
 
 ```
-	* 爬虫系统 / 信息分拣系统 / Saas
+	* 停车系统 / PLC / SpringCloud / 团队搭建
 	
-	网络爬虫开发
-	信息分拣系统
-	原系统重构 & 文档化 & Saas 化
+	开发团队组建,招聘,技术选型
+	智能停车系统开发
+	故障云平台搭建开发
+```
+
+#### 2021.11 - 2022.06 深圳阜嘉科技有限公司
+
+```
+	* 爬虫系统 / 信息分拣系统 / SaaS / PHP / Vue / Rust / Typescript
+	
+	负责私募基金股票信息分析平台重构 & SaaS 化
+	- 股票信息网络爬虫开发( ts + docker + mq )
+	- 股票信息分拣处理系统( php / rust + vue )
+	- 原系统重构 & 代码文档化 & Saas 化
 ```
 
 #### 2020.10 - 2021.09 中集物联(深圳) 架构师
@@ -46,15 +58,15 @@
 	
 	基于 Dapr + go + gorm + mqqt AGV 管理平台
 	对接 车位相机 / 车牌相机 / LED 屏幕 / 交通灯 / 音响 / 车厅 PLC 等设备
-	基于 rouyi 开发 平台停车系统
-	基于 yolov5 + flask + supervisor 的车型识别服务
+	基于 rouyi( SpringBoot ) 开发 平台停车系统
+	基于 Yolov5 + Flask + Supervisor 的车型识别服务
 ```
 
 
 
 #### 2019.09 - 2020.09 自主创业(赣州) 全栈开发
 ```
-	* gin / vue / gorm / saas
+	* gin / vue / gorm / SaaS
 	
 	家具生产管理 SaaS 平台开发
 	商业计划白皮书
@@ -79,7 +91,7 @@
 	负责数据平台前端的搭建&开发(2 php 3 java)
 	负责自定义报表系统的开发 ( 使原来一个报表开发需要半天缩短到10分钟 )
 	负责审批流引擎的开发
-	负责网点规划系统的开发 ( 提供布点建议&竞品分析 )
+	负责网点规划系统的开发 ( 基于 WebGIS 提供布点建议 & 竞品分析 )
 ```
 
 #### 2013.04 - 2016.02 Tencent(深圳) 运营开发工程师
@@ -104,11 +116,11 @@
 
 #### 2009.01 - 2013.03 Shopex(上海) 高级系统开发工程师
 ```
-	* B2B / B2C / 商城系统 / 虚拟物品交易系统 / PaaS平台 / ECshop / 电商Saas
+	* B2B / B2C / 商城系统 / 虚拟物品交易系统 / 电商云PaaS平台 / ECshop / 电商 SaaS
 
 	# 2009.01 - 2010.12 B2B1.22 - B2B
 	
-	熟悉shopex4.8系列 MVC 框架,熟悉 mootools 框架,熟悉电子商务销售前端业务流程，熟悉各种支付接口
+	熟悉 Shopex4.8 系列 MVC 框架,熟悉 mootools 框架,熟悉电子商务销售前端业务流程，熟悉各种支付接口
 	熟悉项目开发管理 ( 带领6个php同时进行项目开发 ),熟悉项目打包发布
 	熟悉团队建设与新人培训(为公司培训了3批新人共9人)
 	熟悉 PHPUnit,以 TDD 方式主导开发
