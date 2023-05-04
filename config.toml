@@ -40,6 +40,11 @@ theme = "hugo-developer-portfolio"
   URL = "blog"
   weight=2
 
+  [[menu.main]]
+  name = "Categories"
+  URL = "categories"
+  weight=3
+
 
 [params]
 home = "Home"
