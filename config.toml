@@ -48,19 +48,17 @@ theme = "hugo-developer-portfolio"
 
 [params]
 home = "Home"
-# Meta data
 description = ""
-author = "Bluefrog"
+author = "bluefrog"
 
+[params.contact]
+enable = true
+formAction = "" #contact form works with formspree.io
 
-  [params.contact]
-  enable = true
-  formAction = "" #contact form works with formspree.io
-
-  [params.footer]
-  email = "bluefrog.wu@gmail.com"
-  address = "Shenzhen, China"
-  googlemaps = ""
+[params.footer]
+email = "bluefrog.wu@gmail.com"
+address = "Shenzhen, China"
+googlemaps = ""
 
 [markup]
   [markup.highlight]
