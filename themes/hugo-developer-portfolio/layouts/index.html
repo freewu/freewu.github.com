@@ -76,12 +76,28 @@
         {{ end }}{{ if .Site.Data.homepage.social.hotmail }}
         <li><a href="mailto:{{ .Site.Data.homepage.social.hotmail }}@hotmail.com" > <img
                     class="contain" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Hotmail" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.telegram }}
+        {{ end }} 
+        {{ if .Site.Data.homepage.social.telegram }}
         <li><a href="https://t.me/{{ .Site.Data.homepage.social.telegram }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/telegram.svg" alt="Telegram" loading="lazy"></a></li>
-        {{ end }} {{ if .Site.Data.homepage.social.whatsapp }}
+        {{ end }} 
+        {{ if .Site.Data.homepage.social.whatsapp }}
         <li><a href="https://wa.me/{{ .Site.Data.homepage.social.whatsapp}}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/whatsapp.svg" alt="Whatsapp" loading="lazy"></a></li>
+        {{ end }}
+        {{ if .Site.Data.homepage.social.weibo }}
+            <li>
+                <a href="https://weibo.com/{{ .Site.Data.homepage.social.weibo}}">
+                    <img class="contain" src="./images/social/weibo.png" alt="Weibo" loading="lazy">
+                </a>
+            </li>
+        {{ end }}
+        {{ if .Site.Data.homepage.social.douban }}
+            <li>
+                <a href="https://douban.com/people/{{ .Site.Data.homepage.social.douban}}">
+                    <img class="contain" src="./images/social/douban.png" alt="Douban" loading="lazy">
+                </a>
+            </li>
         {{ end }}
     </ul>
 
@@ -187,7 +203,12 @@
             uk-grid>
             {{ range .Site.Data.homepage.skill.item }}
             <div class="imagemargin">
-                <img class="contain skills" src="{{.logo}}" alt="{{.title}}" loading="lazy" style="cursor: pointer" />
+                <img 
+                    class="contain skills" src="{{.logo}}" 
+                    title="{{.year}} years experience use {{.title}}" loading="lazy" style="cursor: pointer" />
+                <span
+                    style="margin-top: -70px; margin-left: -12px;" 
+                    class="uk-badge uk-badge-notification">{{.year}}</span>
                 <!-- <img class="contain skills" src="{{.logo}}" alt="{{.company}}" loading="lazy" style="cursor: pointer"
                     uk-toggle="target: #modal_{{cond (isset . "titlealt") .titlealt (replaceRE "\\W" "_" .title) }}"> -->
                 <!-- <h4>{{.title }}</h4> -->

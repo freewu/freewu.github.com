@@ -9,6 +9,8 @@ social:
   facebook: ""
   instagram: ""
   gmail: bluefrog.wu
+  douban: bluefrog
+  weibo: wb1404
 about:
   enable: true
   content: 16 Years Full Stack Developer in China
@@ -17,13 +19,19 @@ skill:
   item:
     - title: JavaScript
       logo: ./images/lang/javascript.png
+      year: 16
     - title: PHP
       logo: ./images/lang/php.png
+      year: 16
     - title: Golang
       logo: ./images/lang/go.png
+      year: 5
     - title: Java
       logo: ./images/lang/java.png
+      year: 6
     - title: Python
       logo: ./images/lang/python.png
+      year: 10
     - title: Rust
       logo: ./images/lang/rust.svg
+      year: 1
