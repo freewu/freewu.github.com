@@ -1,0 +1,1 @@
+{"version":3,"file":"1062.style.css","mappings":"AAAA,wBAGI,WAFA,eACA,UACA","sources":["webpack:///./src/renderer/App/Setting/setting.css"],"sourcesContent":[".ant-divider-inner-text {\r\n    font-size: 12px;\r\n    opacity: 0.8;\r\n    color: blue;\r\n}"],"names":[],"sourceRoot":""}

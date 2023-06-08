@@ -1,0 +1,1 @@
+{"version":3,"file":"5709.renderer.js","mappings":"6IAAA,MAAMA,EAAU,M","sources":["webpack:///./src/renderer/App/AppStore/define.tsx"],"sourcesContent":["const AppName = '应用中心';\r\nimport { AppstoreOutlined as Icon } from '@ant-design/icons';\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName"],"sourceRoot":""}

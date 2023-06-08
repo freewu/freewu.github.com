@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[9909],{9909:(e,s,t)=>{t.r(s),t.d(s,{commaPositionList:()=>i,indentStyleList:()=>l,keywordCaseList:()=>a,languageList:()=>r,logicalOperatorNewlineList:()=>n});const r=["mysql","mariadb","postgresql","spark","sqlite","hive","sql","db2","bigquery","n1ql","plsql","redshift","trino","transactsql","singlestoredb","snowflake"],a=["preserve","upper","lower"],l=["standard","tabularLeft","tabularRight"],i=["before","after","tabular"],n=["before","after"]}}]);
+//# sourceMappingURL=9909.renderer.js.map

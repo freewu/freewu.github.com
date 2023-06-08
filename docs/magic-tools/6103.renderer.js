@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[6103],{6103:(e,r,u)=>{u.r(r),u.d(r,{translateDecimal:()=>s});const s=(e,r)=>{switch(r){case"BIN":return Number("0b"+e);case"OCT":return Number("0o"+e);case"HEX":return Number("0x"+e)}return Number(e)}}}]);
+//# sourceMappingURL=6103.renderer.js.map

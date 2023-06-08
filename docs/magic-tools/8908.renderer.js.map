@@ -1,0 +1,1 @@
+{"version":3,"file":"8908.renderer.js","mappings":"6HAAA,MAAMA,EAAU,UACVC,EAAO,E","sources":["webpack:///./src/renderer/App/SQLFormatter/define.tsx"],"sourcesContent":["const AppName = 'SQL 格式化';\r\nconst Icon = ''\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName","Icon"],"sourceRoot":""}

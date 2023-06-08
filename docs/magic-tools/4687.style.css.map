@@ -1,0 +1,1 @@
+{"version":3,"file":"4687.style.css","mappings":"AAAA,WACE","sources":["webpack:///./src/renderer/App/Help/help.css"],"sourcesContent":[".help-card {\r\n  margin: 5px;\r\n}"],"names":[],"sourceRoot":""}

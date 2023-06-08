@@ -1,54 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Bluefrog Paages</title>
+    <title>Blog on Bluefrog Pages</title>
     <link>https://freewu.github.io/blog/</link>
-    <description>Recent content in Blog on Bluefrog Paages</description>
+    <description>Recent content in Blog on Bluefrog Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://freewu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Making a new Website</title>
-      <link>https://freewu.github.io/blog/d1/first-blog/</link>
-      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
+      <title>Latex Tutorial</title>
+      <link>https://freewu.github.io/blog/latex-tutorial/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://freewu.github.io/blog/d1/first-blog/</guid>
-      <description>For a long time this website has had a couple of links to contact me, but those days are over.
-Now I have a brand new Hugo website with a custom written theme complete with
-A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog Why Hugo? The first question is why a site builder?</description>
-    </item>
-    
-    <item>
-      <title>Making a new Website</title>
-      <link>https://freewu.github.io/blog/d1/second-blog/</link>
-      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
-      
-      <guid>https://freewu.github.io/blog/d1/second-blog/</guid>
-      <description>For a long time this website has had a couple of links to contact me, but those days are over.
-Now I have a brand new Hugo website with a custom written theme complete with
-A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog Why Hugo? The first question is why a site builder?</description>
-    </item>
-    
-    <item>
-      <title>Making a new Website</title>
-      <link>https://freewu.github.io/blog/first-blog/</link>
-      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
-      
-      <guid>https://freewu.github.io/blog/first-blog/</guid>
-      <description>For a long time this website has had a couple of links to contact me, but those days are over.
-Now I have a brand new Hugo website with a custom written theme complete with
-A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog Why Hugo? The first question is why a site builder?</description>
-    </item>
-    
-    <item>
-      <title>Making a new Website</title>
-      <link>https://freewu.github.io/blog/second-blog/</link>
-      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
-      
-      <guid>https://freewu.github.io/blog/second-blog/</guid>
-      <description>For a long time this website has had a couple of links to contact me, but those days are over.
-Now I have a brand new Hugo website with a custom written theme complete with
-A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog Why Hugo? The first question is why a site builder?</description>
+      <guid>https://freewu.github.io/blog/latex-tutorial/</guid>
+      <description>上标和下标 上标（Powers）使用 ^ 来表示，n^2。 下标（Indices）使用 _ 表示，a_2
+1 2 3 $$ {^1_2}a{^3_4} + n^2 - a_2 $$	$$ {^1_2}a{^3_4} + n^2 - a_2 $$
+输入 显示 输入 显示 \langle ⟨⟨ \rangle ⟩⟩ \lceil ⌈⌈ \rceil ⌉⌉ \lfloor ⌊⌊ \rfloor ⌋⌋ \lbrace {{ \rbrace } $$ \langle	⟨	\rangle	⟩
+\lceil	⌈	\rceil	⌉
+\lfloor	⌊	\rfloor	⌋
+\lbrace	{	\rbrace	} $$
+要显示大号的括号或分隔符时，要用 \left 和 \right 命令
+1 2 3 $$ f(x)=\left(\frac{x}{2}\right) $$ $$ f(x)=\left(\frac{x}{2}\right) $$</description>
     </item>
     
   </channel>
