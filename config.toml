@@ -1,7 +1,7 @@
 # Base information
 baseURL = "https://freewu.github.io"
 languageCode = "zh-cn"
-title = "Bluefrog Paages"
+title = "Bluefrog Pages"
 googleAnalytics = ""
 publishDir = "docs"
 
@@ -44,6 +44,17 @@ theme = "hugo-developer-portfolio"
   name = "Categories"
   URL = "categories"
   weight=3
+
+  # [[menu.main]]
+  #   name = "Project"
+  #   weight = 4
+
+  [[menu.main]]
+    # parent = "Project"
+    name = "Magic Tools"
+    URL = "magic-tools"
+    weight = 4
+
 
 
 [params]

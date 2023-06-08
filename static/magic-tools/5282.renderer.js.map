@@ -1,0 +1,1 @@
+{"version":3,"file":"5282.renderer.js","mappings":"6HAAA,MAAMA,EAAU,OACVC,EAAO,E","sources":["webpack:///./src/renderer/App/NumberConvert/define.tsx"],"sourcesContent":["const AppName = '进制转换';\r\nconst Icon = ''\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName","Icon"],"sourceRoot":""}

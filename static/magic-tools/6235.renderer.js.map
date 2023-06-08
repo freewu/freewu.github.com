@@ -1,0 +1,1 @@
+{"version":3,"file":"6235.renderer.js","mappings":"6HAAA,MAAMA,EAAU,cACVC,EAAO,E","sources":["webpack:///./src/renderer/App/Unicode/define.tsx"],"sourcesContent":["const AppName = 'Unicode 编解码';\r\nconst Icon = ''\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName","Icon"],"sourceRoot":""}

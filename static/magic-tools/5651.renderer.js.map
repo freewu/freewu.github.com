@@ -1,0 +1,1 @@
+{"version":3,"file":"5651.renderer.js","mappings":"6HAAA,MAAMA,EAAU,QACVC,EAAO,E","sources":["webpack:///./src/renderer/App/QRCodeGenerator/define.tsx"],"sourcesContent":["const AppName = '二维码生成';\r\nconst Icon = '';\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName","Icon"],"sourceRoot":""}

@@ -1,0 +1,1 @@
+{"version":3,"file":"312.renderer.js","mappings":"2HAAA,MAAMA,EAAU,SACVC,EAAO,E","sources":["webpack:///./src/renderer/App/ColorConvert/define.tsx"],"sourcesContent":["const AppName = '颜色格式转换';\r\nconst Icon = ''\r\n\r\nexport {\r\n  AppName,\r\n  Icon\r\n}"],"names":["AppName","Icon"],"sourceRoot":""}

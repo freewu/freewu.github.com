@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[3416],{3416:(e,l,a)=>{a.r(l),a.d(l,{errorCorrectionLevelList:()=>i});const i=[{value:"L",label:"Low",info:"~7%"},{value:"M",label:"Medium",info:"~15%"},{value:"Q",label:"Quartile",info:"~25%"},{value:"H",label:"High",info:"~30%"}]}}]);
+//# sourceMappingURL=3416.renderer.js.map
