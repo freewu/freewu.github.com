@@ -1,0 +1,1 @@
+{"version":3,"file":"7416.renderer.js","mappings":"+JAAA,MAAMA,EAAU,aACVC,EAAO,GACPC,EAAO,Q","sources":["webpack://magic-tools/./src/renderer/App/RabbitCrypto/define.tsx"],"sourcesContent":["const AppName = 'Rabbit 加解密';\nconst Icon = '';\nconst Type = 'crypto';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

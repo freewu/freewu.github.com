@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[7575],{7575:(s,e,c)=>{c.r(e),c.d(e,{AppName:()=>p,Icon:()=>a});const p="Hash 值计算",a=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[7575],{47575:(c,s,a)=>{a.r(s),a.d(s,{AppName:()=>e,Icon:()=>l,Type:()=>o});const e="Hash 值计算",l="",o="value-calc"}}]);
 //# sourceMappingURL=7575.renderer.js.map

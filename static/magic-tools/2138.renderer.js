@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[2138],{2138:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>p,Icon:()=>k});const p="设置",k=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[2138],{42138:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="设置",p="",a="misc"}}]);
 //# sourceMappingURL=2138.renderer.js.map

@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[5709],{5709:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>a,Icon:()=>p.Z});var p=c(5405);const a="应用中心"}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5709],{15709:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>a.Z,Type:()=>p});var a=e(5405);const o="应用中心",p="misc"}}]);
 //# sourceMappingURL=5709.renderer.js.map

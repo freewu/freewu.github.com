@@ -1,0 +1,1 @@
+{"version":3,"file":"4051.renderer.js","mappings":"+JAAA,MAAMA,EAAU,aACVC,EAAO,GACPC,EAAO,Y","sources":["webpack://magic-tools/./src/renderer/App/PBKDF2Calc/define.tsx"],"sourcesContent":["const AppName = 'PBKDF2 值计算';\nconst Icon = '';\nconst Type = 'value-calc';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}
