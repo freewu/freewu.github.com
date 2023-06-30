@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[9023],{79023:(c,s,e)=>{e.r(s),e.d(s,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="TEA 加解密",p="",t="crypto"}}]);
+//# sourceMappingURL=9023.renderer.js.map

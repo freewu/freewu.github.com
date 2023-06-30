@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5836],{55836:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="图片主题色",p="",a="misc"}}]);
+//# sourceMappingURL=5836.renderer.js.map

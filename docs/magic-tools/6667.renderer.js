@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[6667],{46667:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>a,Icon:()=>o,Type:()=>p});const a="Base64图片",o="",p="misc"}}]);
+//# sourceMappingURL=6667.renderer.js.map

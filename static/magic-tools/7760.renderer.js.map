@@ -1,0 +1,1 @@
+{"version":3,"file":"7760.renderer.js","mappings":"+JAAA,MAAMA,EAAU,QACVC,EAAO,GACPC,EAAO,S","sources":["webpack://magic-tools/./src/renderer/App/RMBConvert/define.tsx"],"sourcesContent":["const AppName = '人民币大写';\nconst Icon = '';\nconst Type = 'convert';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

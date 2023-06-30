@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[2358],{82358:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>a,Type:()=>p});const o="BaseX 编解码",a="",p="codec"}}]);
+//# sourceMappingURL=2358.renderer.js.map

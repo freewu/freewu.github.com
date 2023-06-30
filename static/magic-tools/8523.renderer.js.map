@@ -1,0 +1,1 @@
+{"version":3,"file":"8523.renderer.js","mappings":"8JAAA,MAAMA,EAAU,OACVC,EAAO,GACPC,EAAO,S","sources":["webpack://magic-tools/./src/renderer/App/PinyinConvert/define.tsx"],"sourcesContent":["const AppName = '中文拼音';\nconst Icon = '';\nconst Type = 'convert';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

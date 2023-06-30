@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[9145],{79145:(e,l,s)=>{s.r(l),s.d(l,{typeList:()=>a});const a=[{value:"img",label:"IMG 标签"},{value:"css",label:"CSS"},{value:"base64",label:"Base64"}]}}]);
+//# sourceMappingURL=9145.renderer.js.map

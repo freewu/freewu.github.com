@@ -1,0 +1,1 @@
+{"version":3,"file":"8654.renderer.js","mappings":"+JAAA,MAAMA,EAAU,UACVC,EAAO,GACPC,EAAO,S","sources":["webpack://magic-tools/./src/renderer/App/GPSConvert/define.tsx"],"sourcesContent":["const AppName = 'GPS坐标转换';\nconst Icon = '';\nconst Type = 'convert';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

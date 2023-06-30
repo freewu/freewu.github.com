@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[8214],{8214:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>p,Icon:()=>k});const p="行数统计",k=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[8214],{58214:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="行数统计",p="",a="misc"}}]);
 //# sourceMappingURL=8214.renderer.js.map

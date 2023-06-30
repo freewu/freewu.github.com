@@ -1,0 +1,1 @@
+{"version":3,"file":"9554.renderer.js","mappings":"+JAAA,MAAMA,EAAU,aACVC,EAAO,GACPC,EAAO,O","sources":["webpack://magic-tools/./src/renderer/App/Base58Codec/define.tsx"],"sourcesContent":["const AppName = 'Base58 编解码';\nconst Icon = '';\nconst Type = 'codec';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

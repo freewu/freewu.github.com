@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5232],{45232:(e,t,a)=>{a.r(t),a.d(t,{default:()=>n});var s=a(85893),c=a(19650),r=a(67294),i=a(89250),l=a(27144);const n=({uri:e,label:t,icon:a})=>{const n=(0,i.s0)(),{app:u,setApp:o}=(0,r.useContext)(l.I);return(0,s.jsx)("div",{className:"app",onClick:e=>{const t=e.currentTarget.getAttribute("data-uri");o(t),n("/"+t,{replace:!0})},"data-uri":e,children:(0,s.jsx)(c.Z,{children:t})})}}}]);
+//# sourceMappingURL=5232.renderer.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[8523],{8523:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="中文拼音",p="",t="convert"}}]);
+//# sourceMappingURL=8523.renderer.js.map

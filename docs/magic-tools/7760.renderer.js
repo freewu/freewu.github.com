@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[7760],{47760:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="人民币大写",p="",t="convert"}}]);
+//# sourceMappingURL=7760.renderer.js.map

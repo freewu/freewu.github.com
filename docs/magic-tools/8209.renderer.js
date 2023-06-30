@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[8209],{8209:(t,e,a)=>{a.r(e),a.d(e,{getDefaultCode:()=>s,getDefaultPassphrase:()=>n,setDefaultCode:()=>c,setDefaultPassphrase:()=>u});const o="rc4-crypto:default-code";function s(){const t=localStorage.getItem(o);return null===t?"Base64":t}function c(t){localStorage.setItem(o,t)}const l="rc4-crypto:default-passphrase";function n(){const t=localStorage.getItem(l);return null===t?"":t}function u(t){localStorage.setItem(l,t)}}}]);
+//# sourceMappingURL=8209.renderer.js.map

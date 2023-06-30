@@ -1,0 +1,1 @@
+{"version":3,"file":"5836.renderer.js","mappings":"+JAAA,MAAMA,EAAU,QACVC,EAAO,GACPC,EAAO,M","sources":["webpack://magic-tools/./src/renderer/App/ImageColor/define.tsx"],"sourcesContent":["const AppName = '图片主题色';\nconst Icon = '';\nconst Type = 'misc';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

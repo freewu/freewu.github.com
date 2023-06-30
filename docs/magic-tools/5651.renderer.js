@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[5651],{5651:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>p,Icon:()=>k});const p="二维码生成",k=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5651],{5651:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="二维码生成",p="",a="misc"}}]);
 //# sourceMappingURL=5651.renderer.js.map

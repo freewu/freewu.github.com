@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[8908],{8908:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>p,Icon:()=>k});const p="SQL 格式化",k=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[8908],{18908:(e,s,c)=>{c.r(s),c.d(s,{AppName:()=>o,Icon:()=>t,Type:()=>a});const o="SQL 格式化",t="",a="formatter"}}]);
 //# sourceMappingURL=8908.renderer.js.map

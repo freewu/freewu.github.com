@@ -1,2 +1,2 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[6235],{6235:(e,c,s)=>{s.r(c),s.d(c,{AppName:()=>n,Icon:()=>p});const n="Unicode 编解码",p=""}}]);
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[6235],{6235:(c,e,o)=>{o.r(e),o.d(e,{AppName:()=>s,Icon:()=>p,Type:()=>a});const s="Unicode 编解码",p="",a="codec"}}]);
 //# sourceMappingURL=6235.renderer.js.map

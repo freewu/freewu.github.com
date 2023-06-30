@@ -1,0 +1,1 @@
+{"version":3,"file":"2358.renderer.js","mappings":"+JAAA,MAAMA,EAAU,YACVC,EAAO,GACPC,EAAO,O","sources":["webpack://magic-tools/./src/renderer/App/BaseXCodec/define.tsx"],"sourcesContent":["const AppName = 'BaseX 编解码';\nconst Icon = '';\nconst Type = 'codec';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

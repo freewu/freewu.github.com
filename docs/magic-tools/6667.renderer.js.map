@@ -1,0 +1,1 @@
+{"version":3,"file":"6667.renderer.js","mappings":"+JAAA,MAAMA,EAAU,WACVC,EAAO,GACPC,EAAO,M","sources":["webpack://magic-tools/./src/renderer/App/Base64Image/define.tsx"],"sourcesContent":["const AppName = 'Base64图片';\nconst Icon = '';\nconst Type = 'misc';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}
