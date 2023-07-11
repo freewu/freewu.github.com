@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[9511],{69511:(l,e,a)=>{a.r(e),a.d(e,{typeList:()=>o});const o=[{label:"INI",value:"ini",placeholder:""},{label:"JSON",value:"json",placeholder:""},{label:"Yaml",value:"yaml",placeholder:""},{label:"Toml",value:"toml",placeholder:""},{label:"Properties",value:"properties",placeholder:""}]}}]);
+//# sourceMappingURL=9511.renderer.js.map

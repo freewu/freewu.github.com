@@ -1,1 +1,1 @@
-{"version":3,"file":"9462.style.css","mappings":"AAAA,SAEE,cADA,UACA","sources":["webpack://magic-tools/./src/renderer/App/Base64Image/base64-image.css"],"sourcesContent":[".preview {\r\n  width: 100%;\r\n  overflow: auto;\r\n}"],"names":[],"sourceRoot":""}
+{"version":3,"file":"9462.style.css","mappings":"AAAA,SAEE,cADA,UACA","sources":["webpack://magic-tools/./src/renderer/App/Base64Image/base64-image.css"],"sourcesContent":[".preview {\n  width: 100%;\n  overflow: auto;\n}"],"names":[],"sourceRoot":""}

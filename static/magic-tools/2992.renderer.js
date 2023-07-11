@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[2992],{62992:(s,e,t)=>{t.r(e),t.d(e,{getDefaultPassphrase:()=>l,setDefaultPassphrase:()=>c});const a="hmac-hash:default-passphrase";function l(){const s=localStorage.getItem(a);return null===s?"":s}function c(s){localStorage.setItem(a,s)}}}]);
+//# sourceMappingURL=2992.renderer.js.map

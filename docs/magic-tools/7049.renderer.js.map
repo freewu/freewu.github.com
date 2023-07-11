@@ -1,0 +1,1 @@
+{"version":3,"file":"7049.renderer.js","mappings":"8JAAA,MAAMA,EAAU,OACVC,EAAO,GACPC,EAAO,S","sources":["webpack://magic-tools/./src/renderer/App/SpeedConvert/define.tsx"],"sourcesContent":["const AppName = '速度转换';\nconst Icon = '';\nconst Type = 'convert';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

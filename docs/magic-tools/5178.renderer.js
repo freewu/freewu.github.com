@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5178],{65178:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="面积转换",p="",t="convert"}}]);
+//# sourceMappingURL=5178.renderer.js.map

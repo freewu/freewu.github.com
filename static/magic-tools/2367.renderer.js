@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[2367],{62367:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="配置转换",p="",t="convert"}}]);
+//# sourceMappingURL=2367.renderer.js.map

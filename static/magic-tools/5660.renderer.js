@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5660],{55660:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="容量转换",p="",t="convert"}}]);
+//# sourceMappingURL=5660.renderer.js.map

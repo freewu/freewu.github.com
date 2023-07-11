@@ -1,0 +1,1 @@
+{"version":3,"file":"5660.renderer.js","mappings":"+JAAA,MAAMA,EAAU,OACVC,EAAO,GACPC,EAAO,S","sources":["webpack://magic-tools/./src/renderer/App/VolumeConvert/define.tsx"],"sourcesContent":["const AppName = '容量转换';\nconst Icon = '';\nconst Type = 'convert';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}
