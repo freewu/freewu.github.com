@@ -5,8 +5,9 @@
 	"BirthDay": "1982-06",
 	"Email": "bluefrog.wu@gmail.com",
 	"Mobile": "19907970927",
-	"Blog": "http://bluefrog.cnblogs.com",
-	"Github": "freewu"
+	"Blog": "https://freewu.github.io/",
+	"Github": "https://github.com/freewu",
+	"LeetCode": "https://leetcode.cn/u/bluefrog/"
 }
 ```
 
@@ -22,28 +23,57 @@
 
 ```
 	PHP 		15年 项目架构能力 & 框架定制 & 扩展开发
-	Javascript  16年 vue / react / electron 项目开发能力
+	Javascript  16年 Vue / React / Electron 项目开发能力
 	Golang 		4年 项目架构能力 & 框架开发能力 
-	Java 		6年 基于 spring-boot 的项目架构 & 基于 sprint-cloud 的项目开发
+	Java 		6年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
 	Rust		1年 项目架构能力
 ```
 
 ### 工作经历
 
-#### 2022.08 - now 宁波中集物流装备有限公司
+#### 2023.08 - now 赣州蓝蛙网络科技有限公司
+```
+*  Saas 系统 / Uniapp / Golang / WordPress / Magento
+
+	家具生产管理 Saas 系统
 
 ```
+
+#### 2016.02 - 2023.08 中集集团
+
+```
+# 2022.08 - 2023.07 宁波中集物流装备有限公司
+
 	* 停车系统 / PLC / SpringCloud / 团队搭建
 	
 	开发团队组建,招聘,技术选型
 	智能停车系统开发
 	故障云平台搭建开发
+
+# 2020.10 - 2021.09 中集物联(深圳) 架构师
+
+	* AGV管理平台 / 停车系统 / PLC / Dapr
+	
+	基于 Dapr + go + gorm + mqqt AGV 管理平台
+	对接 车位相机 / 车牌相机 / LED 屏幕 / 交通灯 / 音响 / 车厅 PLC 等设备
+	基于 rouyi( SpringBoot ) 开发 平台停车系统
+	基于 Yolov5 + Flask + Supervisor 的车型识别服务
+
+# 2016.03 - 2018.03 中集电商(深圳) 架构师	
+
+	* BI平台 / OLAP / 数据采集 / 数据清洗 / 数据分析 / 审批引擎
+			
+	负责数据平台前端的搭建&开发(2 php 3 java)
+	负责自定义报表系统的开发 ( 使原来一个报表开发需要半天缩短到10分钟 )
+	负责审批流引擎的开发
+	负责网点规划系统的开发 ( 基于 WebGIS 提供布点建议 & 竞品分析 )
+	
 ```
 
 #### 2021.11 - 2022.06 深圳阜嘉科技有限公司
 
 ```
-	* 爬虫系统 / 信息分拣系统 / SaaS / PHP / Vue / Rust / Typescript
+* 爬虫系统 / 信息分拣系统 / SaaS / PHP / Vue / Rust / Typescript
 	
 	负责私募基金股票信息分析平台重构 & SaaS 化
 	- 股票信息网络爬虫开发( ts + docker + mq )
@@ -51,31 +81,19 @@
 	- 原系统重构 & 代码文档化 & Saas 化
 ```
 
-#### 2020.10 - 2021.09 中集物联(深圳) 架构师
-
-```
-	* AGV管理平台 / 停车系统 / PLC / Dapr
-	
-	基于 Dapr + go + gorm + mqqt AGV 管理平台
-	对接 车位相机 / 车牌相机 / LED 屏幕 / 交通灯 / 音响 / 车厅 PLC 等设备
-	基于 rouyi( SpringBoot ) 开发 平台停车系统
-	基于 Yolov5 + Flask + Supervisor 的车型识别服务
-```
-
-
-
 #### 2019.09 - 2020.09 自主创业(赣州) 全栈开发
 ```
-	* gin / vue / gorm / SaaS
+* gin / vue / gorm / SaaS
 	
 	家具生产管理 SaaS 平台开发
 	商业计划白皮书
+
 ```
 
 #### 2018.03 - 2019.07 腾梭智能(深圳) 架构师	
 
 ```
-	* 风控系统 / 特征系统 / 实时反欺诈 / 规则引擎 / 数据服务
+* 风控系统 / 特征系统 / 实时反欺诈 / 规则引擎 / 数据服务
 		
 	负责风控反欺诈平台搭建&开发(4 php)
 	负责风控反欺诈平台在多家银行网贷系统项目落地
@@ -83,22 +101,11 @@
 	负责各类第三方数据接入&联调方案
 ```
 
-
-#### 2016.03 - 2018.03 中集电商(深圳) 架构师	
-```
-	* BI平台 / OLAP / 数据采集 / 数据清洗 / 数据分析 / 审批引擎
-			
-	负责数据平台前端的搭建&开发(2 php 3 java)
-	负责自定义报表系统的开发 ( 使原来一个报表开发需要半天缩短到10分钟 )
-	负责审批流引擎的开发
-	负责网点规划系统的开发 ( 基于 WebGIS 提供布点建议 & 竞品分析 )
-```
-
 #### 2013.04 - 2016.02 Tencent(深圳) 运营开发工程师
 ```	
-	* 监控平台 / 系统重构 / 系统迁移 / APP 发布平台 / 开放平台
+* 监控平台 / 系统重构 / 系统迁移 / APP 发布平台 / 开放平台
 	
-	# 2014.09 - 2016.02 互娱运营部( MSDK )
+# 2014.09 - 2016.02 互娱运营部( MSDK )
 		
 	负责移动游戏管理平台前台&后端的开发&重构(4 php 1 设计)
 	负责移动游戏排期系统的开发
@@ -106,52 +113,50 @@
 	及时处理多起线上安全问题
 	领导团队完成互备，使用 markdown 完善开发文档
 	
-	# 2013.03 - 2014.09 数据平台部
+# 2013.03 - 2014.09 数据平台部
 	
 	主导数平监控系统(广点通&腾讯计费系统)的前端开发和重构
 	主导原 C# 系统代码迁移
 	参与微信平台的监控系统开发
 	熟悉项目是使用的 codeigniter & highchart & jqueryui 开源组件，熟悉 jquery 插件开发
+	
 ```
 
 #### 2009.01 - 2013.03 Shopex(上海) 高级系统开发工程师
 ```
-	* B2B / B2C / 商城系统 / 虚拟物品交易系统 / 电商云PaaS平台 / ECshop / 电商 SaaS
+* B2B / B2C / 商城系统 / 虚拟物品交易系统 / 电商云PaaS平台 / ECshop / 电商 SaaS
 
-	# 2009.01 - 2010.12 B2B1.22 - B2B
+# 2009.01 - 2010.12 B2B1.22 - B2B
 	
 	熟悉 Shopex4.8 系列 MVC 框架,熟悉 mootools 框架,熟悉电子商务销售前端业务流程，熟悉各种支付接口
 	熟悉项目开发管理 ( 带领6个php同时进行项目开发 ),熟悉项目打包发布
 	熟悉团队建设与新人培训(为公司培训了3批新人共9人)
 	熟悉 PHPUnit,以 TDD 方式主导开发
 	
-	# 2009.6 - 2009.8 ECstore 促销模块
+# 2009.6 - 2009.8 ECstore 促销模块
 	
 	熟悉 ecos 框架,熟悉了各大开源电商系统的促销模块(为开发完美的促销系统 读遍了所有出名的开源电商系统源码)
 	熟悉使用 xphrof 进行程序的性能瓶颈分析,使用 ab/tsung 进行压力测试,熟悉集群部署
 	
-	# 2010.12 - 2012.5 Shopex模板堂
+# 2010.12 - 2012.5 Shopex模板堂
 	
 	熟悉从0开始的项目开发,团队管理(2 php 1 交互 1 前端) 
 	php安全开发 ( 处理几次XSS问题 )
 	了解 Imagemagic / memcached / mongo 等组件的使用与配置
 	
-	# 2011.12 - 2013.3 ECAE企业云(运营平台,代理平台,SDK,代码分发模块)
+# 2011.12 - 2013.3 ECAE企业云(运营平台,代理平台,SDK,代码分发模块)
 	
 	熟悉 Scrum 开发模式
 	掌握 Erlang 开发，了解 OTP 原则
 	熟悉分布系统原理，了解分布式文件存储
 	了解使用 Hudson 进行持续集成测试,使用 Tsung 进行系统压力测试, Puppet 进行服务部署
-	
-	# 2013.2 - 2013.3 云猫
-	
-	熟悉 taobao api调用，KISSY 框架的使用
-```
+	独立开发 云猫系统  熟悉 taobao api调用，KISSY 框架的使用
 
+```
 
 #### 2008.02 - 2008.12 Gooyaa(深圳) PHP开发工程师
 ```
-	* CMS系统 / Discuz二次开发 / SNS系统 
+* CMS系统 / Discuz二次开发 / SNS系统 
 	
 	主导整个爬虫后台的 CMS 管理系统的开发
 	使用 uchome + ucenter 整合多个论坛和户外sns系统
@@ -159,7 +164,7 @@
 
 #### 2007.06 - 2007.11 Baituo(南昌) ASP/PHP开发工程师
 ```
-	* 企业建站 / 政务系统 / Discuz二次开发 / 经销存系统
+* 企业建站 / 政务系统 / Discuz二次开发 / 经销存系统
 
 	主要使用asp + access & php + mysql 从事企业建站相关工作
 	期间主导开发了5个企业站和1个政务系统
@@ -179,14 +184,24 @@
 
 ### 项目
 ```
+# 工具集小程序
+
+	使用 Uniapp 开发的多平台工具集小程序
+	https://github.com/freewu/magic-tools-lite
+
+# 多平台工具集应用
+
+	使用 Electron + React + Antd 开发的一个跨平台桌面工具集应用
+	https://github.com/freewu/magic-tools
+
 # 后台管理前端模板 (2021.10)
 
-	一个基于 ts / vue3 / element-plus 的后台管理前端模板(ruoyi-go 的前端部份)
+	一个基于 TypeScript / Vue3 / Element-plus 的后台管理前端模板(ruoyi-go 的前端部份)
 	https://github.com/freewu/ruoyi-ui
 
 # 后台管理模板 (2021.10)
 	
-	一个基于 gin / gorm 的后台管理模板(数据表&接口参照 rouyi)
+	一个基于 Gin / Gorm 的后台管理模板(数据表&接口参照 rouyi)
 	https://github.com/freewu/ruoyi-go
 
 # 数据 mock 服务 (2019.05)
