@@ -6,22 +6,14 @@
     <description>Recent content in Blog on Bluefrog Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="https://freewu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate>
+    <atom:link href="https://freewu.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latex Tutorial</title>
       <link>https://freewu.github.io/blog/latex-tutorial/</link>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://freewu.github.io/blog/latex-tutorial/</guid>
-      <description>上标和下标 上标（Powers）使用 ^ 来表示，n^2。 下标（Indices）使用 _ 表示，a_2
-1 2 3 $$ {^1_2}a{^3_4} + n^2 - a_2 $$	$$ {^1_2}a{^3_4} + n^2 - a_2 $$
-输入 显示 输入 显示 \langle ⟨⟨ \rangle ⟩⟩ \lceil ⌈⌈ \rceil ⌉⌉ \lfloor ⌊⌊ \rfloor ⌋⌋ \lbrace {{ \rbrace } $$ \langle	⟨	\rangle	⟩
-\lceil	⌈	\rceil	⌉
-\lfloor	⌊	\rfloor	⌋
-\lbrace	{	\rbrace	} $$
-要显示大号的括号或分隔符时，要用 \left 和 \right 命令
-1 2 3 $$ f(x)=\left(\frac{x}{2}\right) $$ $$ f(x)=\left(\frac{x}{2}\right) $$</description>
+      <description>上标和下标 上标（Powers）使用 ^ 来表示，n^2。 下标（Indices）使用 _ 表示，a_2&#xA;1 2 3 $$ {^1_2}a{^3_4} + n^2 - a_2 $$&#x9;$$ {^1_2}a{^3_4} + n^2 - a_2 $$&#xA;输入 显示 输入 显示 \langle ⟨⟨ \rangle ⟩⟩ \lceil ⌈⌈ \rceil ⌉⌉ \lfloor ⌊⌊ \rfloor ⌋⌋ \lbrace {{ \rbrace } $$ \langle&#x9;⟨&#x9;\rangle&#x9;⟩&#xA;\lceil&#x9;⌈&#x9;\rceil&#x9;⌉&#xA;\lfloor&#x9;⌊&#x9;\rfloor&#x9;⌋&#xA;\lbrace&#x9;{&#x9;\rbrace&#x9;} $$&#xA;要显示大号的括号或分隔符时，要用 \left 和 \right 命令&#xA;1 2 3 $$ f(x)=\left(\frac{x}{2}\right) $$ $$ f(x)=\left(\frac{x}{2}\right) $$</description>
     </item>
-    
   </channel>
 </rss>

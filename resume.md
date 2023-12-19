@@ -22,11 +22,11 @@
 ### 掌握技能
 
 ```
-	PHP 		16年 项目架构能力 & 框架定制 & 扩展开发
-	Javascript  16年 Vue / React / Electron 项目开发能力
-	Golang 		4年 项目架构能力 & 框架开发能力 
-	Java 		6年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
-	Rust		1年 项目架构能力
+	PHP 		16 年 项目架构能力 & 框架定制 & 扩展开发
+	Javascript  16 年 Vue / React / Electron 项目开发能力
+	Golang 		4 年 项目架构能力 & 框架开发能力 
+	Java 		6 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
+	Rust		1 年 项目架构能力
 ```
 
 ### 工作经历

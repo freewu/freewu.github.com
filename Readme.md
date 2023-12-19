@@ -1,3 +1,8 @@
+## 安装 hugo
+```
+go install -v github.com/gohugoio/hugo@latest
+```
+
 ## 预览
 ```
 hugo server
