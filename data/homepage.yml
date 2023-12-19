@@ -1,10 +1,11 @@
 ---
 banner:
-  title: Hi! I’m Bluefrog
+  title: Hi! I’m Bluefrog, A Programmer
 social:
-  twitter: ""
+  twitter: _bluefrog
   linkedin: ""
   github: freewu
+  leetcode: freewu
   gitlab: ""
   facebook: ""
   instagram: ""
@@ -13,25 +14,25 @@ social:
   weibo: wb1404
 about:
   enable: true
-  content: 16 Years Full Stack Developer in China
+  content: 17 Years Full Stack Developer in China
 skill:
   enable: true
   item:
     - title: JavaScript
       logo: ./images/lang/javascript.png
-      year: 16
+      year: 17
     - title: PHP
       logo: ./images/lang/php.png
-      year: 16
+      year: 17
     - title: Golang
       logo: ./images/lang/go.png
-      year: 5
+      year: 6
     - title: Java
       logo: ./images/lang/java.png
-      year: 6
+      year: 7
     - title: Python
       logo: ./images/lang/python.png
-      year: 10
+      year: 11
     - title: Rust
       logo: ./images/lang/rust.svg
-      year: 1
+      year: 2

@@ -27,7 +27,8 @@
     {{ end }}
     <div class="uk-container uk-margin-large-top uk-margin-xlarge-bottom">
 
-        <h1 class="uk-heading-large">{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
+        <!-- <h3 class="uk-heading-large">{{ .Site.Data.homepage.banner.title | safeHTML }}</h3> -->
+        <h1>{{ .Site.Data.homepage.banner.title | safeHTML }}</h1>
     </div>
 
 
@@ -99,6 +100,13 @@
                 </a>
             </li>
         {{ end }}
+        {{ if .Site.Data.homepage.social.leetcode }}
+        <li>
+            <a href="https://leetcode.com/{{ .Site.Data.homepage.social.leetcode}}">
+                <img class="contain" src="./images/social/leetcode.png" alt="Leetcode" loading="lazy">
+            </a>
+        </li>
+    {{ end }}
     </ul>
 
 
