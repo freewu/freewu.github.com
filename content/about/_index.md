@@ -20,7 +20,7 @@ author : "bluefrog"
 
 ### 自我介绍
 ```
-	17 年 电商 / 监控 / 物联网 / 互联网金融 / 生产管理 / SaaS 系统架构 & 开发经验
+	18 年 电商 / 监控 / 物联网 / 互联网金融 / 生产管理 / SaaS 系统架构 & 开发经验
 	10 年以上小团队管理经验
 	多年的 toG / toB / toBank 项目落地 & 系统实施经验
 	多次甲方身份对接第三方技术供应商
@@ -28,12 +28,12 @@ author : "bluefrog"
 
 ### 掌握技能
 ```
-	PHP 		17 年 项目架构能力 & 框架定制 & 扩展开发
-	Javascript  17 年 Vue / React / Electron 项目开发能力
-	Java 		7 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
-	Golang 		7 年 项目架构能力 & 框架开发能力 
-	Python 		6 年 项目架构能力
-	Rust		1 年 项目架构能力
+	PHP 		18 年 项目架构能力 & 框架定制 & 扩展开发
+	Javascript  18 年 Vue / React / Electron 项目开发能力
+	Java 		8 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
+	Golang 		8 年 项目架构能力 & 框架开发能力 
+	Python 		8 年 项目架构能力
+	Rust		2 年 项目架构能力
 ```
 
 ### 工作经历
