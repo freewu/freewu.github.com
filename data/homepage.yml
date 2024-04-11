@@ -14,22 +14,22 @@ social:
   weibo: wb1404
 about:
   enable: true
-  content: 17 Years Full Stack Developer in China
+  content: 18 Years Full Stack Developer in China
 skill:
   enable: true
   item:
     - title: JavaScript
       logo: ./images/lang/javascript.png
-      year: 17
+      year: 18
     - title: PHP
       logo: ./images/lang/php.png
-      year: 17
+      year: 18
     - title: Golang
       logo: ./images/lang/go.png
-      year: 6
+      year: 8
     - title: Java
       logo: ./images/lang/java.png
-      year: 7
+      year: 8
     - title: Python
       logo: ./images/lang/python.png
       year: 11
