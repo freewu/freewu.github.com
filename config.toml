@@ -6,9 +6,9 @@ googleAnalytics = ""
 publishDir = "docs"
 
 # Remove this when using normally
-themesDir = "./themes" 
+themesDir = "./themes"
 theme = "hugo-developer-portfolio"
-# 
+#
 #[module]
 #  [[module.imports]]
 #    path = "github.com/samrobbins85/hugo-developer-portfolio"
@@ -45,15 +45,28 @@ theme = "hugo-developer-portfolio"
   URL = "categories"
   weight=3
 
-  # [[menu.main]]
-  #   name = "Project"
-  #   weight = 4
+# [[menu.main]]
+#     name = "Project"
+#     identifier = "project"
+#     weight = 4
 
-  [[menu.main]]
-    # parent = "Project"
+[[menu.main]]
+    #parent = "project"
     name = "Magic Tools"
     URL = "magic-tools"
     weight = 4
+
+[[menu.main]]
+    #parent = "project"
+    name = "API Manager"
+    URL = "api-manager"
+    weight = 5
+
+[[menu.main]]
+    #parent = "project"
+    name = "Cache Manager"
+    URL = "cache-manager"
+    weight = 6
 
 
 
@@ -82,4 +95,3 @@ googlemaps = ""
     noClasses = true
     style = "rainbow_dash"
     tabWidth = 4
-
