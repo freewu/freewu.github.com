@@ -68,6 +68,12 @@ theme = "hugo-developer-portfolio"
     URL = "cache-manager"
     weight = 6
 
+[[menu.main]]
+    #parent = "project"
+    name = "Book Manager"
+    URL = "book-manager"
+    weight = 7
+
 
 
 [params]

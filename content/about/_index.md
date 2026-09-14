@@ -20,7 +20,7 @@ author : "bluefrog"
 
 ### 自我介绍
 ```
-	18 年 电商 / 监控 / 物联网 / 互联网金融 / 生产管理 / SaaS 系统架构 & 开发经验
+	19 年 电商 / 监控 / 物联网 / 互联网金融 / 生产管理 / SaaS 系统架构 & 开发经验
 	10 年以上小团队管理经验
 	多年的 toG / toB / toBank 项目落地 & 系统实施经验
 	多次甲方身份对接第三方技术供应商
@@ -28,12 +28,12 @@ author : "bluefrog"
 
 ### 掌握技能
 ```
-	PHP 		18 年 项目架构能力 & 框架定制 & 扩展开发
-	Javascript  18 年 Vue / React / Electron 项目开发能力
-	Java 		8 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
-	Golang 		8 年 项目架构能力 & 框架开发能力 
-	Python 		8 年 项目架构能力
-	Rust		2 年 项目架构能力
+	PHP 		19 年 项目架构能力 & 框架定制 & 扩展开发
+	Javascript  19 年 Vue / React / Electron 项目开发能力
+	Java 		9 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
+	Golang 		9 年 项目架构能力 & 框架开发能力 
+	Python 		9 年 项目架构能力
+	Rust		3 年 项目架构能力
 ```
 
 ### 工作经历
@@ -46,6 +46,8 @@ author : "bluefrog"
     园区管理系统
     智慧农业系统
 	参与多个 LLM + RAG 项目开发
+	赣乐购小程序性能优化&功能开发(赣州银行)
+	智能营销平台功能开发(赣州银行)
 
 ```
 
