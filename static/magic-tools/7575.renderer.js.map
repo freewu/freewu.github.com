@@ -1,1 +1,0 @@
-{"version":3,"file":"7575.renderer.js","mappings":"+JAAA,MAAMA,EAAU,WACVC,EAAO,GACPC,EAAO,Y","sources":["webpack://magic-tools/./src/renderer/App/Hash/define.tsx"],"sourcesContent":["const AppName = 'Hash 值计算';\nconst Icon = '';\nconst Type = 'value-calc';\n\nexport {\n  AppName,\n  Icon,\n  Type,\n}"],"names":["AppName","Icon","Type"],"sourceRoot":""}

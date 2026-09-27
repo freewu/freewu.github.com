@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[170],{20170:(t,n,e)=>{e.r(n),e.d(n,{calcLineCount:()=>s,removeEmptyLine:()=>i});const s=t=>{const n=t.split("\n"),e=n.length;return 1===e&&""===n[0]?0:e},i=t=>{if(""===t.trim())return"";let n=[];return t.split("\n").map((t=>{""!==t.trim()&&n.push(t)})),n.join("\n")}}}]);
-//# sourceMappingURL=170.renderer.js.map

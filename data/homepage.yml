@@ -36,3 +36,26 @@ skill:
     - title: Rust
       logo: ./images/lang/rust.svg
       year: 3
+project:
+  enable: true
+  item:
+    - title: Magic Tools
+      logo: ./images/project/magic-tools.png
+      description: 134 developer utilities in 9 categories — cross-platform desktop & web.
+      link: https://github.com/freewu/magic-tools
+    - title: API Manager
+      logo: ./images/project/api-manager.png
+      description: API documentation, testing and Mock workbench built with Tauri 2.
+      link: https://github.com/freewu/api-manager
+    - title: Cache Manager
+      logo: ./images/project/cache-manager.png
+      description: Redis & Memcached desktop manager with cluster support.
+      link: https://github.com/freewu/cache-manager
+    - title: Book Manager
+      logo: ./images/project/book-manager.png
+      description: Local-first e-book library with a built-in epub / pdf / mobi reader.
+      link: https://github.com/freewu/book-manager
+    - title: DB Manager
+      logo: ./images/project/db-manager.png
+      description: Desktop client for MySQL, PostgreSQL, SQLite, MongoDB, TiDB and Doris.
+      link: https://github.com/freewu/db-manager

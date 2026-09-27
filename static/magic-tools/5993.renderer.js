@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[5993],{35993:(l,c,o)=>{o.r(c),o.d(c,{default:()=>e});var s=o(85893);const e=({color:l,label:c,title:o,colorClickEvent:e})=>(0,s.jsxs)("div",{onClick:()=>{e(l,c)},className:"color-card",title:o||c,style:{backgroundColor:l},children:[c.length<=10?c:c.substring(0,8)+"..","( ",l," )"]})}}]);
-//# sourceMappingURL=5993.renderer.js.map

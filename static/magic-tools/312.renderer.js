@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[312],{312:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>t});const o="颜色格式转换",p="",t="convert"}}]);
-//# sourceMappingURL=312.renderer.js.map

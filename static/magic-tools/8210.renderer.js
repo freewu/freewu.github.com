@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[8210],{58210:(c,e,s)=>{s.r(e),s.d(e,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="URL 编解码",p="",a="codec"}}]);
-//# sourceMappingURL=8210.renderer.js.map

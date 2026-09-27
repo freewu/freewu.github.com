@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmagic_tools=self.webpackChunkmagic_tools||[]).push([[7419],{97419:(s,c,e)=>{e.r(c),e.d(c,{AppName:()=>o,Icon:()=>p,Type:()=>a});const o="CSS 配色",p="",a="misc"}}]);
-//# sourceMappingURL=7419.renderer.js.map
