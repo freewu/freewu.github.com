@@ -46,6 +46,20 @@ git push origin master
 - `just clean` 只清理 `public/`、`resources/`，不删除 `docs/`；`just clean-all` 会删 `docs/`，仅在明确需要时使用。
 - 发布前用 `git status docs` 确认没有大批 `D`（删除）记录。
 
+## ⚠️ 不要把开发模式产物提交到 docs/
+
+`hugo server` 默认会把页面写到 `publishDir`（即 `docs/`），且开发模式会：
+
+- 把链接写成 `http://localhost:1313/`（污染 sitemap / RSS / 所有页面）
+- 不压缩 HTML，导致 docs/ 出现大量无关变更
+
+因此：
+
+- `just serve` 已加 `--renderToMemory`，本地预览**不会**改动 `docs/`（日志显示 `Serving pages from memory`）。
+- 直接手跑 hugo 时也必须加 `-M/--renderToMemory`；发布前必须用 **`just build`** 生成 `docs/`。
+- 提交前跑 **`just verify`**：它会检查 `docs/` 是否含有 `localhost:1313`，有则报错阻止提交。`just release` 已内置该步骤。
+- 若发现 docs/ 被开发产物污染：`git checkout <上一个好提交> -- docs && just build` 恢复。
+
 ## WSL / Windows 环境
 
 - justfile 会自动探测 hugo：优先 `$HUGO` 环境变量，其次 `hugo`、`hugo.exe`。本机 WSL 内未安装 Linux 版时，会直接使用 Windows 版（如 `C:\Users\24358\go\bin\hugo.exe`，已在 PATH 中）。
@@ -60,9 +74,10 @@ just check           # 检查 git / hugo 依赖
 just serve [port]    # 本地预览 http://localhost:1313/
 just new <name>      # 新建文章 content/blog/<name>.md
 just build           # 构建到 docs/（--minify，不清理 docs/）
+just verify          # 校验 docs/ 无开发模式链接（localhost:1313）
 just clean           # 清理 public/ resources/（不会删 docs/）
 just clean-all       # 彻底清理（含 docs/，谨慎）
-just release "msg"   # 一键发布（clean + build + commit + push）
+just release "msg"   # 一键发布（clean + build + verify + commit + push）
 just push "msg"      # 仅提交并推送
 just status          # 查看改动与最近提交
 ```

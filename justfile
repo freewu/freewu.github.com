@@ -66,7 +66,7 @@ serve port="1313" *args:
     @echo "==> 预览 http://localhost:{{port}}/  (Ctrl-C 退出)"
     @echo "==> 使用 hugo: {{hugo}}"
     {{hugo}} server -t {{theme}} --bind {{bind}} --port {{port}} \
-        --buildDrafts --buildFuture --disableFastRender {{args}}
+        --renderToMemory --buildDrafts --buildFuture --disableFastRender {{args}}
 
 # 本地预览（等价于 just serve）
 [group('dev')]
@@ -99,6 +99,20 @@ build:
 build-drafts:
     {{hugo}} -t {{theme}} --buildDrafts --buildFuture --cleanDestinationDir -d public
 
+# 校验 docs/ 为生产构建产物（防止开发模式产物被误提交）
+[group('build')]
+verify:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    hits="$(grep -rIl 'localhost:1313' "{{publish_dir}}" || true)"
+    if [ -n "$hits" ]; then
+        echo "✗ 校验失败：{{publish_dir}}/ 含有 http://localhost:1313（开发模式产物）" >&2
+        echo "$hits" | head >&2
+        echo "  请执行 just build 重新生成后再提交" >&2
+        exit 1
+    fi
+    echo "==> 校验通过：{{publish_dir}}/ 无开发模式链接"
+
 # 清理构建缓存（不会动 docs/，其中含手工维护的文件）
 [group('build')]
 clean:
@@ -130,11 +144,12 @@ new-page name:
 #  发布
 # ═══════════════════════════════════════════════════════════════
 
-# 一键发布：清理 → 构建 → 提交 → 推送（GitHub Actions 自动部署 Pages）
+# 一键发布：清理 → 构建 → 校验 → 提交 → 推送（GitHub Actions 自动部署 Pages）
 [group('deploy')]
 release msg="site update":
     @just clean
     @just build
+    @just verify
     git add -A
     @git commit -m "{{msg}}" || echo "==> 没有需要提交的变更"
     git push origin {{origin_branch}}
