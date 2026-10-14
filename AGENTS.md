@@ -48,12 +48,9 @@ git push origin master
 
 ## WSL / Windows 环境
 
-- 若 WSL 内没有 hugo，但 Windows 已安装（如 `C:\Users\<你>\go\bin\hugo.exe`），用环境变量覆盖：
-
-  ```bash
-  HUGO=/mnt/c/Users/24358/go/bin/hugo.exe just build
-  HUGO=hugo.exe just serve      # 已加入 PATH 时
-  ```
+- justfile 会自动探测 hugo：优先 `$HUGO` 环境变量，其次 `hugo`、`hugo.exe`。本机 WSL 内未安装 Linux 版时，会直接使用 Windows 版（如 `C:\Users\24358\go\bin\hugo.exe`，已在 PATH 中）。
+- 如需强制指定：`HUGO=/path/to/hugo just build`；可用 `just check` 查看实际使用的可执行文件。
+- 启动 bash 时出现的 `wsl: 检测到 localhost 代理配置，但未镜像到 WSL...` 是 WSL 自身的告警（Windows 侧配置了代理但未开启镜像模式），**不影响构建与预览**，可忽略。
 
 ## 常用命令
 

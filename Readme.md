@@ -46,7 +46,7 @@ just status          # 查看当前改动与最近提交
 
 > 别名：`s` = `serve`，`p` = `preview`，`b` = `build`，`post` = `new`，`deploy` / `up` = `release`
 
-> WSL 下 hugo 只有 Windows 版时：`HUGO=hugo.exe just build`（`HUGO` 环境变量可覆盖可执行文件）
+> WSL 下自动探测 hugo：优先 `$HUGO`，其次 `hugo`、`hugo.exe`（无需手动指定）。如需强制某个版本：`HUGO=/path/to/hugo just build`。
 
 > ⚠️ `docs/` 里除了 Hugo 生成的页面，还有**手工维护的内容**（`magic-tools/`、`resume/`、`api-manager/` 等），所以构建**不能**加 `--cleanDestinationDir`，`just clean` 也不会删除 `docs/`。
 

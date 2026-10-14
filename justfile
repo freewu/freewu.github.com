@@ -9,7 +9,8 @@ set shell := ["bash", "-uc"]
 
 # ── 配置 ────────────────────────────────────────────────────────
 theme         := "hugo-developer-portfolio"          # 站点主题
-hugo          := env_var_or_default("HUGO", "hugo")   # hugo 可执行文件（WSL 下可设 HUGO=hugo.exe）
+# hugo 可执行文件：优先 $HUGO，其次 hugo / hugo.exe（WSL 下自动使用 Windows 版）
+hugo          := env_var_or_default("HUGO", `command -v hugo || command -v hugo.exe || echo hugo`)
 publish_dir   := "docs"                              # hugo publishDir（GitHub Pages 目录）
 origin_branch := "master"                            # 源码仓库主分支
 pages_repo    := "git@github.com:freewu/freewu.github.io.git"  # Pages 部署仓库
@@ -47,7 +48,7 @@ list:
 check:
     @echo "==> 依赖检查"
     @command -v git  >/dev/null 2>&1 && echo "  git  : $(git --version)" || { echo "  git  : ✗ 未安装"; exit 1; }
-    @command -v hugo >/dev/null 2>&1 && echo "  hugo : $({{hugo}} version)" || { echo "  hugo : ✗ 未安装（可执行  just install-hugo，或设置 HUGO=hugo.exe）"; exit 1; }
+    @command -v {{hugo}} >/dev/null 2>&1 && echo "  hugo : $($(command -v {{hugo}}) version)  [$(command -v {{hugo}})]" || { echo "  hugo : ✗ 未安装（可执行  just install-hugo，或设置 HUGO=/path/to/hugo）"; exit 1; }
 
 # 通过 go install 安装 hugo
 [group('env')]
@@ -63,6 +64,7 @@ install-hugo:
 [group('dev')]
 serve port="1313" *args:
     @echo "==> 预览 http://localhost:{{port}}/  (Ctrl-C 退出)"
+    @echo "==> 使用 hugo: {{hugo}}"
     {{hugo}} server -t {{theme}} --bind {{bind}} --port {{port}} \
         --buildDrafts --buildFuture --disableFastRender {{args}}
 
