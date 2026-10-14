@@ -1,18 +1,65 @@
-## 安装 hugo
-```
-go install -v github.com/gohugoio/hugo@latest
+# freewu.github.com
+
+基于 [Hugo](https://gohugo.io/) + 主题 `hugo-developer-portfolio` 的个人站点，产物输出到 `docs/`，由 GitHub Pages 发布。
+
+日常操作统一使用 [just](https://github.com/casey/just) 管理（见 [`justfile`](./justfile)）。
+
+## 准备
+
+```bash
+# 安装 just（任选其一）
+winget install Casey.Just        # Windows
+brew install just                # macOS
+cargo install just               # Rust
+
+# 检查本地依赖
+just check
+
+# 未安装 hugo 时，可用 go 安装
+just install-hugo
 ```
 
-## 预览
-```
-hugo server
+## 常用命令
 
-visit http://localhost:1313/
+```bash
+just                 # 列出所有命令（默认目标）
+just check           # 检查 git / hugo 是否就绪
+
+just serve           # 本地预览 http://localhost:1313/（含草稿、热更新）
+just serve 8080      # 指定端口
+just preview         # 等价于 just serve
+
+just new my-post     # 新建文章 content/blog/my-post.md
+just drafts          # 列出所有草稿
+just posts           # 列出所有文章
+
+just build           # 构建生产站点到 docs/（--minify，不清理 docs/）
+just build-drafts    # 构建含草稿的站点到 public/（本地验证）
+just clean           # 清理 public/ resources/ 缓存（不动 docs/）
+just clean-all       # 彻底清理（含 docs/，谨慎）
+
+just release "msg"   # 一键发布：clean -> build -> commit -> push（推荐）
+just push "msg"      # 只提交推送源码，不在本地构建
+just push-pages      # 备用：把 docs/ 强制推送到 Pages 仓库
+just status          # 查看当前改动与最近提交
 ```
 
-## 发布
-```
-hugo -t hugo-developer-portfolio
-git commit -m""
-git push
+> 别名：`s` = `serve`，`p` = `preview`，`b` = `build`，`post` = `new`，`deploy` / `up` = `release`
+
+> WSL 下 hugo 只有 Windows 版时：`HUGO=hugo.exe just build`（`HUGO` 环境变量可覆盖可执行文件）
+
+> ⚠️ `docs/` 里除了 Hugo 生成的页面，还有**手工维护的内容**（`magic-tools/`、`resume/`、`api-manager/` 等），所以构建**不能**加 `--cleanDestinationDir`，`just clean` 也不会删除 `docs/`。
+
+## 发布流程
+
+1. `just serve` 本地预览确认效果
+2. `just release "更新说明"` —— 自动构建 `docs/`、提交并推送到 `origin/master`
+3. GitHub Actions（[`.github/workflows/hugo.yml`](./.github/workflows/hugo.yml)）自动部署 GitHub Pages
+
+## 不使用 just 时的手动命令
+
+```bash
+hugo server                                        # 预览
+hugo -t hugo-developer-portfolio                   # 构建到 docs/
+git add -A && git commit -m "msg" && git push      # 发布
 ```
