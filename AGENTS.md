@@ -75,12 +75,18 @@ just serve [port]    # 本地预览 http://localhost:1313/
 just new <name>      # 新建文章 content/blog/<name>.md
 just build           # 构建到 docs/（--minify，不清理 docs/）
 just verify          # 校验 docs/ 无开发模式链接（localhost:1313）
+just favicon         # 由根目录 logo.png 重新生成 favicon 到 static/
 just clean           # 清理 public/ resources/（不会删 docs/）
 just clean-all       # 彻底清理（含 docs/，谨慎）
 just release "msg"   # 一键发布（clean + build + verify + commit + push）
 just push "msg"      # 仅提交并推送
 just status          # 查看改动与最近提交
 ```
+
+## 导航与图标
+
+- **顶部导航支持两级菜单**：`config.toml` 的 `[[menu.main]]` 中，父级用 `identifier = "projects"`（`URL = "#"` 表示只展开不跳转），子项用 `parent = "projects"` 关联；外部链接（`https://...`）会新窗口打开。渲染在 `themes/hugo-developer-portfolio/layouts/partials/menu.html`：桌面端用 UIkit 下拉（`uk-navbar-dropdown`），手机侧边栏用 `uk-nav-sub` 二级列表。新增子项只需加一条带 `parent` 的菜单项。
+- **网站图标（favicon）**：源图是仓库根目录的 `logo.png`（正方形，2048x2048）。改动图标后执行 `just favicon` 重新生成 `static/favicon.ico`、`favicon-16x16.png`、`favicon-32x32.png`、`apple-touch-icon.png`、`android-chrome-{192,512}.png`、`site.webmanifest`（脚本：`scripts/gen-favicon.py`，需 Pillow），然后 `just build` 同步到 `docs/`。引用位置：主题 `partials/head.html`。
 
 ## 目录说明
 
@@ -92,6 +98,9 @@ content/blog/        博客文章
 content/about/       About 页面
 data/homepage.yml    首页数据
 static/images/       静态图片
+static/favicon*.png  网站图标（由 logo.png 生成，勿手改）
+logo.png             品牌源图（favicon 生成源）
+scripts/             辅助脚本（gen-favicon.py 等）
 themes/hugo-developer-portfolio/   主题（含自定义 layouts 改动）
 docs/                构建产物（GitHub Pages 发布目录，需提交）
 .github/workflows/hugo.yml         CI：推送 master 后自动部署 Pages

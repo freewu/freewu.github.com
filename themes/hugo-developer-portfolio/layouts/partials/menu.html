@@ -1,0 +1,57 @@
+{{- /*
+  导航菜单（支持两级）。带 children 的条目渲染为下拉菜单。
+  参数：
+    page = 当前 Page（用于高亮当前栏目）
+    mode = "navbar"（顶部导航）| "side"（手机侧边导航）
+  外部链接（http 开头）保持原样并新窗口打开；URL = "#" 视为纯父级（仅展开子菜单）。
+*/ -}}
+{{- $page := .page -}}
+{{- $mode := .mode -}}
+{{- $cur := $page.RelPermalink -}}
+{{- range site.Menus.main -}}
+  {{- $url := .URL -}}
+  {{- $isExternal := hasPrefix $url "http" -}}
+  {{- $isAnchor := eq $url "#" -}}
+  {{- $href := $url -}}
+  {{- $rel := "" -}}
+  {{- if not (or $isExternal $isAnchor) -}}
+    {{- $href = $url | relURL -}}
+    {{- $rel = $url | relURL -}}
+  {{- end -}}
+  {{- $active := and (not $isExternal) (not $isAnchor) (ne $url "") (hasPrefix $cur $rel) -}}
+  {{- if .HasChildren -}}
+    {{- if eq $mode "navbar" -}}
+      <li{{ if $active }} class="uk-active"{{ end }}>
+        <a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ .Name }} <span style="font-size: 10px; opacity: .7">▾</span></a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            {{- range .Children -}}
+              {{- $curl := .URL -}}
+              {{- $chref := $curl -}}
+              {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relURL -}}{{- end -}}
+              <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+            {{- end -}}
+          </ul>
+        </div>
+      </li>
+    {{- else -}}
+      <li class="uk-parent{{ if $active }} uk-active{{ end }}">
+        <a style="font-size: 18px" href="{{ $href }}">{{ .Name }}</a>
+        <ul class="uk-nav-sub">
+          {{- range .Children -}}
+            {{- $curl := .URL -}}
+            {{- $chref := $curl -}}
+            {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relURL -}}{{- end -}}
+            <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+          {{- end -}}
+        </ul>
+      </li>
+    {{- end -}}
+  {{- else -}}
+    {{- if eq $mode "navbar" -}}
+      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ .Name }}</a></li>
+    {{- else -}}
+      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px" href="{{ $href }}">{{ .Name }}</a></li>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

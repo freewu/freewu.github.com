@@ -10,20 +10,7 @@
                         {{ end }}</a></li>
 
                 {{end}}
-                {{ range .Site.Menus.main }}
-                {{$aURL := .URL | relLangURL}}
-                {{$page := $.Page.Permalink | relLangURL}}
-                {{$aURL2 := split $aURL "/"}}
-                {{$page2 := split $page "/"}}
-                {{$aURL3 := index $aURL2 1}}
-                {{$page3 := index $page2 1}}
-                {{if eq $aURL3 $page3}}
-                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
-                        href="{{ .URL | relURL }}">{{.Name}}</a></li>
-                {{else}}
-                <li><a style="font-size: 18px; text-transform: none" href="{{ .URL | relURL }}">{{.Name}}</a></li>
-                {{end}}
-                {{end}}
+                {{- partial "menu.html" (dict "page" . "mode" "navbar") -}}
             </ul>
 
             <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
@@ -43,19 +30,7 @@
             <li><a style="font-size: 18px" href="{{.Site.BaseURL}}">{{ with .Site.Params.Home }} {{ . }} {{ end }}</a></li>
 
             {{end}}
-            {{ range .Site.Menus.main }}
-            {{$aURL := .URL | relLangURL}}
-            {{$page := $.Page.Permalink | relLangURL}}
-            {{$aURL2 := split $aURL "/"}}
-            {{$page2 := split $page "/"}}
-            {{$aURL3 := index $aURL2 1}}
-            {{$page3 := index $page2 1}}
-            {{if eq $aURL3 $page3}}
-            <li class="uk-active"><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
-            {{else}}
-            <li><a style="font-size: 18px" href="{{ .URL | relURL }}">{{.Name}}</a></li>
-            {{end}}
-            {{end}}
+            {{- partial "menu.html" (dict "page" . "mode" "side") -}}
         </ul>
 
     </div>

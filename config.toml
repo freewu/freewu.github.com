@@ -27,52 +27,85 @@ theme = "hugo-developer-portfolio"
   URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
 
 
-# navigation
+# navigation（支持两级菜单：parent / identifier 关联子项）
 [menu]
 
   [[menu.main]]
   name = "About"
   URL = "about"
-  weight=1
+  weight = 1
 
   [[menu.main]]
   name = "Blog"
   URL = "blog"
-  weight=2
+  weight = 2
 
   [[menu.main]]
   name = "Categories"
   URL = "categories"
-  weight=3
+  weight = 3
 
-# [[menu.main]]
-#     name = "Project"
-#     identifier = "project"
-#     weight = 4
-
-[[menu.main]]
-    #parent = "project"
-    name = "Magic Tools"
-    URL = "magic-tools"
+  # ── 二级菜单：Projects ──────────────────────────────────────────
+  [[menu.main]]
+    name = "Projects"
+    identifier = "projects"
+    URL = "#"
     weight = 4
 
-[[menu.main]]
-    #parent = "project"
+  [[menu.main]]
+    name = "Magic Tools"
+    parent = "projects"
+    URL = "https://freewu.github.io/magic-tools/"
+    weight = 1
+
+  [[menu.main]]
     name = "API Manager"
-    URL = "api-manager"
+    parent = "projects"
+    URL = "https://freewu.github.io/api-manager/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Cache Manager"
+    parent = "projects"
+    URL = "https://freewu.github.io/cache-manager/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Book Manager"
+    parent = "projects"
+    URL = "https://freewu.github.io/book-manager/"
+    weight = 4
+
+  [[menu.main]]
+    name = "DB Manager"
+    parent = "projects"
+    URL = "https://freewu.github.io/db-manager/"
     weight = 5
 
-[[menu.main]]
-    #parent = "project"
-    name = "Cache Manager"
-    URL = "cache-manager"
-    weight = 6
+  # ── 二级菜单：Books ─────────────────────────────────────────────
+  [[menu.main]]
+    name = "Books"
+    identifier = "books"
+    URL = "#"
+    weight = 5
 
-[[menu.main]]
-    #parent = "project"
-    name = "Book Manager"
-    URL = "book-manager"
-    weight = 7
+  [[menu.main]]
+    name = "Chrome Extension Cookbook V3"
+    parent = "books"
+    URL = "https://freewu.github.io/chrome-extension-cookbook-v3/"
+    weight = 1
+
+  [[menu.main]]
+    name = "VSCode Extension Cookbook"
+    parent = "books"
+    URL = "https://freewu.github.io/vscode-extension-cookbook/"
+    weight = 2
+
+  [[menu.main]]
+    name = "PHP8 Extension Cookbook"
+    parent = "books"
+    URL = "https://freewu.github.io/php-extension-cookbook/"
+    weight = 3
 
 
 
