@@ -41,21 +41,45 @@ project:
   item:
     - title: Magic Tools
       logo: ./images/project/magic-tools.png
-      description: 134 developer utilities in 9 categories — cross-platform desktop & web.
-      link: https://github.com/freewu/magic-tools
+      description: 使用 Tauri 2 + AntDesign 开发的跨平台工具集，9 大类 134 个开发者工具。
+      link: https://freewu.github.io/magic-tools/
+      repo: https://github.com/freewu/magic-tools
     - title: API Manager
       logo: ./images/project/api-manager.png
-      description: API documentation, testing and Mock workbench built with Tauri 2.
-      link: https://github.com/freewu/api-manager
+      description: 使用 Tauri 2 + React + Vite 开发的 HTTP / GraphQL / Websocket / Socket.IO 接口文档、测试与 Mock 跨平台应用。
+      link: https://freewu.github.io/api-manager/
+      repo: https://github.com/freewu/api-manager
     - title: Cache Manager
       logo: ./images/project/cache-manager.png
-      description: Redis & Memcached desktop manager with cluster support.
-      link: https://github.com/freewu/cache-manager
+      description: 使用 Tauri 2 + Vue3 + Vite 开发的 Redis / Memcached 跨平台客户端，支持集群。
+      link: https://freewu.github.io/cache-manager/
+      repo: https://github.com/freewu/cache-manager
     - title: Book Manager
       logo: ./images/project/book-manager.png
-      description: Local-first e-book library with a built-in epub / pdf / mobi reader.
-      link: https://github.com/freewu/book-manager
+      description: 使用 Wails v2 + React + Vite 开发的本地电子书管理跨平台应用，内置 epub / pdf / mobi 阅读器。
+      link: https://freewu.github.io/book-manager/
+      repo: https://github.com/freewu/book-manager
     - title: DB Manager
       logo: ./images/project/db-manager.png
-      description: Desktop client for MySQL, PostgreSQL, SQLite, MongoDB, TiDB and Doris.
-      link: https://github.com/freewu/db-manager
+      description: 使用 Wails v2 + React + Vite 开发的 RDB 跨平台客户端，支持 MySQL / PostgreSQL / SQLite / MongoDB / TiDB / Doris。
+      link: https://freewu.github.io/db-manager/
+      repo: https://github.com/freewu/db-manager
+
+book:
+  enable: true
+  item:
+    - title: Chrome Extension Cookbook V3
+      logo: ./images/book/chrome-extension-cookbook-v3.jpg
+      description: Chrome 扩展开发实战手册（Manifest V3）。
+      link: https://freewu.github.io/chrome-extension-cookbook-v3/
+      repo: https://github.com/freewu/chrome-extension-cookbook-v3
+    - title: VSCode Extension Cookbook
+      logo: ./images/book/vscode-extension-cookbook.jpg
+      description: Visual Studio Code 扩展开发实战手册。
+      link: https://freewu.github.io/vscode-extension-cookbook/
+      repo: https://github.com/freewu/vscode-extension-cookbook
+    - title: PHP8 Extension Cookbook
+      logo: ./images/book/php-extension-cookbook.jpg
+      description: PHP 8 扩展开发实战手册。
+      link: https://freewu.github.io/php-extension-cookbook/
+      repo: https://github.com/freewu/php-extension-cookbook
