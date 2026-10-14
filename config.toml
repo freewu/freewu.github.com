@@ -1,6 +1,6 @@
 # Base information
 baseURL = "https://freewu.github.io"
-languageCode = "zh-cn"
+locale = "zh-cn"
 title = "Bluefrog Pages"
 googleAnalytics = ""
 publishDir = "docs"
