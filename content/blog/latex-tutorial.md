@@ -1,16 +1,17 @@
 ---
-title: "Latex Tutorial"
+title: "LaTeX Tutorial"
 date: 2023-05-09
-description: "Latex Tutorial"
+description: "A LaTeX cheat sheet: superscripts, fractions, roots, matrices, cases, tables, commutative diagrams and more."
 author: "bluefrog"
 type: "post"
 slug: "latex-tutorial"
 ---
 
-## 上标和下标
 
-> 上标（Powers）使用 ^ 来表示，n^2。
-> 下标（Indices）使用 _ 表示，a_2
+## Superscripts and subscripts
+
+> Superscripts (Powers) are written with `^`, e.g. n^2.
+> Subscripts (Indices) are written with `_`, e.g. a_2
 
 ```latex
 $$
@@ -21,7 +22,7 @@ $$
 {^1_2}a{^3_4} + n^2 - a_2
 $$
 
-|  输入   | 显示 |  输入   | 显示 |
+|  Input   | Display |  Input   | Display |
 | :-----: | :--: | :-----: | :--: |
 | \langle |  ⟨⟨  | \rangle |  ⟩⟩  |
 | \lceil  |  ⌈⌈  | \rceil  |  ⌉⌉  |
@@ -35,7 +36,7 @@ $$
 \lbrace	{	\rbrace	}
 $$
 
->  要显示大号的括号或分隔符时，要用 `\left` 和 `\right` 命令 
+> Use the `\left` and `\right` commands to render large brackets or delimiters
 
 ```latex
 $$
@@ -46,9 +47,9 @@ $$
 f(x)=\left(\frac{x}{2}\right)
 $$
 
-## 分数
+## Fractions
 
->  分数使用 `\frac{numerator}{denominator}` 命令插入 
+> Insert a fraction with `\frac{numerator}{denominator}`
 
 ```latex
 $$
@@ -68,7 +69,7 @@ $$
 \frac{y}{\frac{3}{x}+b}
 $$
 
->  分式很复杂，亦可使用 `分子 \over 分母` 命令 
+> Complex fractions can also be written as `numerator \over denominator`
 ```latex
 $$
 \frac{a-1}{b-1} and {a+1\over b+1}
@@ -78,9 +79,9 @@ $$
 \frac{a-1}{b-1} and {a+1\over b+1}
 $$
 
-## 开方
+## Roots
 
->  使用`sqrt[根指数，省略时为2]{被开方数}`命令来输入开方 
+> Use `sqrt[index, defaults to 2]{radicand}` to enter a root
 ```
 $$
 \sqrt{2} \quad and \quad \sqrt[n]{3}
@@ -90,11 +91,11 @@ $$
 \sqrt{2} \quad and \quad \sqrt[n]{3}
 $$
 
-## 省略号
+## Ellipsis
 
 
 
->  `\ldots` 表示与文本底线对齐的省略号 
+> `\ldots` is an ellipsis aligned with the text baseline
 ```latex
 $$
 1+2+\ldots+n
@@ -104,7 +105,7 @@ $$
 1+2+\ldots+n
 $$
 
->  `\cdots` 表示与文本中线对齐的省略号 
+> `\cdots` is an ellipsis aligned with the middle of the text line
 ```latex
 $$
 1+2+\cdots+n
@@ -113,11 +114,11 @@ $$
 $$
 1+2+\cdots+n
 $$
-## 矢量
+## Vectors
 
-> 矢量是一种既有大小又有方向的量，又称为向量。一般来说，在物理学中称作矢量，例如速度、加速度、力等等就是这样的量。舍弃实际含义，就抽象为数学中的概念──向量 
+> A vector is a quantity that has both magnitude and direction, also called a vector. In physics it is called a vector, e.g. velocity, acceleration, force. Dropping the physical meaning, it becomes the mathematical concept of a vector.
 >
->  使用`\vec{矢量}`来自动产生一个矢量 
+> Use `\vec{vector}` to render a vector automatically
 ```latex
 $$
 \vec{a} \cdot \vec{b}=0
@@ -127,7 +128,7 @@ $$
 \vec{a} \cdot \vec{b}=0
 $$
 
->  使用  `\overrightarrow` `\overleftrightarrow`  `\overleftarrow` 等命令定义字母上的符号 
+> Use the `\overrightarrow`, `\overleftrightarrow`, `\overleftarrow` commands to put symbols above letters
 ```latex
 $$
 \overleftarrow{xy} \quad and \quad 
@@ -141,9 +142,9 @@ $$
 \overrightarrow{xy}
 $$
 
-## 积分
+## Integrals
 
->  使用`\int_积分下限^积分上限{被积表达式}`来输入一个积分 
+> Use `\int_{lower}^{upper}{integrand}` to enter an integral
 
 ```latex
 $$
@@ -156,29 +157,29 @@ $$
 \int_0^1 {x^2dx}
 $$
 
-## 极限
+## Limits
 
->  使用`\lim_{变量 \to 表达式} 表达式`来输入一个极限。如有需求，可以更改`\to`符号至任意符号 
+> Use `\lim_{variable \to expression} expression` to enter a limit. The `\to` symbol can be replaced by any other symbol if needed
 
 ```latex
 $$ 
 \lim_{ n \to +\infty } \frac{1}{ n( n + 1) } \quad and \quad 
-\lim_{ x \leftarrow { 示例 } } \frac{1}{ n( n + 1) } 
+\lim_{ x \leftarrow { example } } \frac{1}{ n( n + 1) } 
 $$
 ```
 
 $$
 \lim_{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad 
-\lim_{x\leftarrow{示例}} \frac{1}{n(n+1)}
+\lim_{x\leftarrow{example}} \frac{1}{n(n+1)}
 $$
 
-##  累乘，并集，交集 
+## Products, unions and intersections
 
->  使用`\sum_{下标表达式}^{上标表达式}{表达式}`来输入一个累加表达式 
+> Use `\sum_{lower}^{upper}{expression}` to enter a summation
 >
->  使用`\prod_{下标表达式}^{上标表达式}{表达式}`来输入一个并集
+> Use `\prod_{lower}^{upper}{expression}` to enter a product
 >
->  使用`\bigcup_{下标表达式}^{上标表达式}{表达式}`来输入一个交集
+> Use `\bigcup_{lower}^{upper}{expression}` to enter a union
 
 ```latex
 $$
@@ -194,12 +195,12 @@ $$
 \bigcup_{i=1}^{2} R
 $$
 
-## 希腊字母
+## Greek letters
 
->  输入`\小写希腊字母英文全称`,`\首字母大写希腊字母英文全称`来分别输入小写和大写希腊字母
-> 对于大写希腊字母与现有字母相同的，直接输入大写字母即可 
+> Enter `\lowercase-name` or `\Capitalized-name` to get the lowercase or uppercase Greek letter
+> When the uppercase Greek letter is identical to a Latin letter, just type the capital letter
 
-|   输入   | 显示 |  输入   | 显示 |   输入   | 显示 |   输入   | 显示 |
+|   Input   | Display |  Input   | Display |   Input   | Display |   Input   | Display |
 | :------: | :--: | :-----: | :--: | :------: | :--: | :------: | :--: |
 |  \alpha  |  α   |    A    |  A   |  \beta   |  β   |    B     |  B   |
 |  \gamma  |  γ   | \Gamma  |  Γ   |  \delta  |  δ   |  \Delta  |  Δ   |
@@ -237,9 +238,9 @@ B \quad
 \Omega \quad
 $$
 
->  以 `\var-` 开头的部分字母变量专用形式
+> Some letters have dedicated variant forms starting with `\var`
 
-|   小写   |  大写  |    变量     | 显示  |
+|   Lowercase   |  Uppercase  |    Variant     | Display  |
 | :------: | :----: | :---------: | :---: |
 | \epsilon |   E    | \varepsilon | ϵ E ε |
 |  \theta  | \Theta |  \vartheta  | θ Θ ϑ |
@@ -272,11 +273,11 @@ $$
 \varphi  \quad
 $$
 
-## 关系运算符
+## Relational operators
 
->  若需要显示更大或更小的字符，在符号前面插入`\large`或`\small`命令 
+> To render a symbol larger or smaller, prefix it with `\large` or `\small`
 
-|   输入   | 显示 |    输入    | 显示 |   输入    | 显示 |    输入    | 显示 |
+|   Input   | Display |    Input    | Display |   Input    | Display |    Input    | Display |
 | :------: | :--: | :--------: | :--: | :-------: | :--: | :--------: | :--: |
 |   \pm    |  ±   |   \times   |  ×   |   \div    |  ÷   |    \mid    |  ∣   |
 |  \nmid   |  ∤   |   \cdot    |  ⋅   |   \circ   |  ∘   |    \ast    |  ∗   |
@@ -316,9 +317,9 @@ $$
 
 
 
-## 集合运算符
+## Set operators
 
-|   输入    | 显示 |   输入    | 显示 |   输入    | 显示 |
+|   Input    | Display |   Input    | Display |   Input    | Display |
 | :-------: | :--: | :-------: | :--: | :-------: | :--: |
 | \emptyset |  ∅   |    \in    |  ∈   |  \notin   |  ∉   |
 |  \subset  |  ⊂   |  \supset  |  ⊃   | \subseteq |  ⊆   |
@@ -342,9 +343,9 @@ $$
 \biguplus \,
 $$
 
-##  对数运算符
+## Logarithmic operators
 
-| 输入 | 显示 | 输入 | 显示 | 输入 | 显示 |
+| Input | Display | Input | Display | Input | Display |
 | :--: | :--: | :--: | :--: | :--: | :--: |
 | \log | log  | \lg  |  lg  | \ln  |  ln  |
 
@@ -354,9 +355,9 @@ $$
 \large\lg \, \lg  \, \small\lg  
 $$
 
-## 三角运算符
+## Trigonometric operators
 
-|   输入   | 显示 | 输入 | 显示 |   输入   | 显示 |
+|   Input   | Display | Input | Display |   Input   | Display |
 | :------: | :--: | :--: | :--: | :------: | :--: |
 | 30^\circ | 30∘  | \bot |  ⊥   | \angle A |  ∠A  |
 |   \sin   | sin  | \cos | cos  |   \tan   | tan  |
@@ -372,25 +373,25 @@ $$
 \cot \, \large\cot , \small\cot
 $$
 
-## 微积分运算符
+## Calculus operators
 
-|  输入   | 显示 |  输入  | 显示 |  输入  | 显示 |
+|  Input   | Display |  Input  | Display |  Input  | Display |
 | :-----: | :--: | :----: | :--: | :----: | :--: |
 |  \int   |  ∫   | \iint  |  ∬   | \iiint |  ∭   |
 | \iiiint |  ⨌   | \oint  |  ∮   | \prime |  ′   |
 |  \lim   | lim  | \infty |  ∞   | \nabla |  ∇   |
 
-## 逻辑运算符
+## Logic operators
 
-|   输入   | 显示 |    输入    | 显示 |    输入     | 显示 |
+|   Input   | Display |    Input    | Display |    Input     | Display |
 | :------: | :--: | :--------: | :--: | :---------: | :--: |
 | \because |  ∵   | \therefore |  ∴   |             |      |
 | \forall  |  ∀   |  \exists   |  ∃   | \not\subset |  ⊄   |
 |  \not<   |  ≮   |   \not>    |  ≯   |    \not=    |  ≠   |
 
-## 戴帽符号
+## Accents (hat symbols)
 
-|  输入  | 显示 |    输入    | 显示 |
+|  Input  | Display |    Input    | Display |
 | :----: | :--: | :--------: | :--: |
 |  \hat  |      |  \widehat  |      |
 | \tilde |      | \widetilde |      |
@@ -414,9 +415,9 @@ $$
 \acute{x} \,
 $$
 
-## 连线符号
+## Lines and connectives
 
-|                      输入                      |
+|                      Input                      |
 | :--------------------------------------------: |
 |                     \fbox                      |
 |                 \overleftarrow                 |
@@ -455,15 +456,15 @@ $$
 \underbrace{a \cdot a \cdots a}_{b \text{ times}}
 $$
 
-## 箭头符号
+## Arrow symbols
 
-|        输入         | 显示 |        输入         | 显示 |       输入       |        显示         |
+|        Input         | Display |        Input         | Display |       Input       |        Display         |
 | :-----------------: | :--: | :-----------------: | :--: | :--------------: | :-----------------: |
 |         \to         |  →   |       \mapsto       |  ↦   | \underrightarrow | 1℃/min−→−−−−1℃/min→ |
 |      \implies       |  ⟹   |        \iff         |  ⟺   |    \impliedby    |          ⟸          |
 
 
-|        输入         | 显示 |        输入         | 显示 |
+|        Input         | Display |        Input         | Display |
 |        :----:      | :-:  |   :------:         | :-:  |
 |      \uparrow       |  ↑  |      \Uparrow       |  ⇑  |
 |     \downarrow      |  ↓  |     \Downarrow      |  ⇓  |
@@ -498,17 +499,17 @@ $$
 
 
 
-## 字体转换
+## Font styles
 
->  一般情况下，公式默认为意大利体italicitalic
+> By default, formulas are typeset in italic
 
-| 输入 |   说明   | 输入  |    说明    |
-| :--: | :------: | :---: | :--------: |
-| \rm  |  罗马体  | \cal  |    花体    |
-| \it  | 意大利体 | \Bbb  |  黑板粗体  |
-| \bf  |   粗体   | \mit  |  数学斜体  |
-| \sf  |   粗体   | \scr  |   手写体   |
-| \tt  | 打印机体 | \frak | 旧德式字体 |
+| Input |   Description   | Input |    Description    |
+| :---: | :-------------: | :---: | :---------------: |
+| \rm   |      Roman      | \cal  |      Script       |
+| \it   |     Italic      | \Bbb  | Blackboard bold   |
+| \bf   |      Bold       | \mit  |   Math italic     |
+| \sf   |   Sans-serif    | \scr  |   Calligraphic    |
+| \tt   |   Typewriter    | \frak | Old German (Fraktur) |
 
 $$
 \rm{sample} \,|\, 
@@ -523,10 +524,10 @@ $$
 \frak{sample} \,
 $$
 
-## 大括号和行标
+## Braces and equation tags
 
->  使用`\left`和`\right`来创建自动匹配高度的 (圆括号)，[方括号] 和 {花括号} 。
-> 在每个公式末尾前使用`\tag{行标}`来实现行标 
+> Use `\left` and `\right` to create parentheses ( ), brackets [ ] and braces { } that automatically match the content height.
+> Put `\tag{tag}` before the end of a formula to number it
 
 $$
 f\left(
@@ -541,10 +542,10 @@ f\left(
      }+a
    \right]^{3/2}
 \right)
-\tag{行标}
+\tag{tag}
 $$
 
->  需要将行内显示的分隔符也变大，可以使用`\middle`命令 
+> Use the `\middle` command to enlarge inline delimiters as well
 
 $$
 \left\langle  
@@ -558,9 +559,9 @@ $$
 
 
 
-## 空格 & 换行
+## Spaces & line breaks
 
->  有四种宽度的空格可以使用:`\,`、`\;`、`\quad`和`\qquad` 
+> Four widths of space are available: `\,`, `\;`, `\quad` and `\qquad`
 
 $$
 ab \\ 
@@ -571,12 +572,12 @@ a \qquad b \\
 a \text{  } b 
 $$
 
-## 颜色
+## Colors
 
-> 使用`\color{颜色}{文字}`来更改特定的文字颜色。
-> 更改文字颜色**需要浏览器支持**，如果浏览器不知道你所需的颜色，那么文字将被渲染为黑色 
+> Use `\color{color}{text}` to change the color of a piece of text.
+> Changing text color **requires browser support**; if the browser does not know the color you asked for, the text is rendered in black
 
-|  输入  |  输入   |
+|  Input  |  Input   |
 | :----: | :-----: |
 | black  |  grey   |
 | silver |  white  |
@@ -601,7 +602,7 @@ $$
 \color{teal}{\frac{a-1}{b-1}}
 $$
 
->  输入`\color {#rgb} {text}`来自定义更多的颜色其中`#rgb`的`r` `g` `b`可输入`0-9`和`a-f`来表示红色、绿色和蓝色的纯度（饱和度） 
+> Enter `\color{#rgb}{text}` to define more colors; `r` `g` `b` accept `0-9` and `a-f` and express the intensity (saturation) of red, green and blue
 
 $$
 \color{#000fff}{\frac{a-1}{b-1}} \,|\,
@@ -612,10 +613,10 @@ $$
 \color{#FFC0CB}{\frac{a-1}{b-1}}
 $$
 
-## 删除线
+## Strike-through
 
->  在公式内使用`\require{cancel}`来允许**片段删除线**的显示。
-> 声明片段删除线后，使用`\cancel{字符}`、`\bcancel{字符}`、`\xcancel{字符}`和`\cancelto{字符}`来实现各种片段删除线效果 
+> Use `\require{cancel}` inside a formula to enable **partial strike-through**.
+> Once declared, use `\cancel{chars}`, `\bcancel{chars}`, `\xcancel{chars}` and `\cancelto{chars}` for various partial strike-through effects
 
 $$
 \require{cancel}
@@ -627,8 +628,8 @@ $$
 \verb+\frac{1\cancel9}{\cancel95} = \frac15+ \qquad \frac{1\cancel9}{\cancel95} = \frac15 \\
 $$
 
-> 使用`\enclose{删除线效果}{字符}`来实现各种整段删除线效果。
-> 其中，删除线效果有`horizontalstrike`、`verticalstrike`、`updiagonalstrike`和`downdiagonalstrike`，可叠加使用 
+> Use `\enclose{effect}{chars}` for full-width strike-through effects.
+> The effects are `horizontalstrike`, `verticalstrike`, `updiagonalstrike` and `downdiagonalstrike`, and they can be combined
 
 $$
 \require{enclose}
@@ -639,11 +640,11 @@ $$
 \verb|\enclose{horizontalstrike,updiagonalstrike}{x+y}| \qquad \enclose{horizontalstrike,updiagonalstrike}{x+y}\\
 $$
 
->  `\enclose{}{}`命令还可以产生包围的边框和圆 
+> The `\enclose{}{}` command can also draw a frame or a circle around the content
 
 |                            |                              |
 | :------------------------: | :--------------------------: |
-|            输入            |             输入             |
+|            Input            |             Input             |
 |     \enclose{longdiv}      |     \enclose{actuarial}      |
 |     \enclose{radical}      |        \enclose{box}         |
 |    \enclose{roundedbox}    |       \enclose{circle}       |
@@ -674,15 +675,15 @@ $$
 \verb|\enclose{phasorangle}{x+y}| \qquad \enclose{phasorangle}{x+y}\\
 $$
 
-## 矩阵
+## Matrices
 
-> 在开头使用`begin{matrix}`，
+> Start with `begin{matrix}`,
 >
-> 在结尾使用`end{matrix}`，
+> end with `end{matrix}`,
 >
-> 在中间插入矩阵元素，每个元素之间插入`&`，也可以说是空格，
+> put the matrix elements in between, separated by `&` (i.e. columns),
 >
-> 并在每行结尾处使用`\\`。 
+> and end each row with `\\`.
 
 ```
 $$
@@ -747,7 +748,7 @@ $$
 $$
 ```
 
-> 使用`\cdots`,`\ddots`,`\vdots`来输入省略符号
+> Use `\cdots`, `\ddots`, `\vdots` to enter ellipses
 ```latex
 $$	
     \begin{pmatrix}    
@@ -770,7 +771,7 @@ $$
     \end{pmatrix}
 $$
 
->  `cc|c`代表在一个三列矩阵中的第二和第三列之间插入分割线 
+> `cc|c` inserts a divider between the second and third column of a three-column matrix
 
 ```
 $$
@@ -806,10 +807,10 @@ $$
 \right]
 $$
 
-## 方程式序列
+## Aligned equations
 
-> 使用`\begin{align}…\end{align}`来创造一列方程式，其中在每行结尾处使用`\\`
-> 请注意 {align} 语句是 自动编号 的，使用 {align*} 声明停止自动编号 
+> Use `\begin{align}…\end{align}` to create a column of equations, ending each row with `\\`
+> Note that {align} numbers the equations automatically; use {align*} to stop the automatic numbering
 
 ```latex
 $$
@@ -833,9 +834,9 @@ $$
 \end{align*}
 $$
 
->  在`{align}`中灵活组合`\text`和`\tag`语句
+> `\text` and `\tag` can be freely combined inside `{align}`
 >
-> `\tag`语句编号优先级高于自动编号 
+> A `\tag` takes precedence over the automatic number
 
 ```latex
 $$
@@ -855,13 +856,13 @@ $$
 \end{align}
 $$
 
-## 条件表达式
+## Conditional expressions
 
->  用`begin{cases}`来创造一组条件表达式，
+> Use `begin{cases}` to create a set of conditional expressions,
 >
-> **在每一行条件中插入`&`来指定需要对齐的内容**，并在每一行结尾处使用`\\`，
+> **put `&` in each row to mark what should be aligned**, and end each row with `\\`,
 >
-> 以`end{cases}`结束 
+> finishing with `end{cases}`
 
 ```latex
 $$
@@ -881,7 +882,7 @@ f(n) =
     \end{cases}
 $$
 
-> 左对齐
+> Left-aligned
 
 ```latex
 $$
@@ -905,9 +906,9 @@ $$
 =f(n)
 $$
 
->  使用`\\[2ex]`语句代替该行末尾的`\\`来让编辑器适配行高 
+> Use `\\[2ex]` instead of `\\` at the end of a row to give the editor more row height
 >
->  **一个`[ex]`指一个 "X-Height"，即x字母高度。可以根据情况指定多个`[ex]`，如`[3ex]`、`[4ex]`** 
+> **One `[ex]` is one "X-Height", i.e. the height of the letter x. Use as many as needed, e.g. `[3ex]`, `[4ex]`**
 
 ```latex
 $$
@@ -951,22 +952,22 @@ f(n) =
 \end{cases}
 $$
 
-## 表格
+## Tables
 
->  数组和表格均以`begin{array}`开头，
+> Arrays and tables both start with `begin{array}`,
 >
-> 其后定义列数及每一列的文本对齐属性，`c`,`l`,`r`分别代表居中、左对齐及右对齐
+> followed by the number of columns and the text alignment of each column; `c`, `l`, `r` mean center, left and right
 >
-> 若需要插入垂直分割线，在定义式中插入`|`，若要插入水平分割线，在下一行输入前插入`\hline`
+> For a vertical divider insert `|` in the column spec; for a horizontal divider insert `\hline` before the next row
 >
-> 与矩阵相似，每行元素间均须要插入`&`，每行元素以`\\`结尾
+> As with matrices, each element must be separated by `&` and each row ends with `\\`
 >
-> 最后以`end{array}`结束数组 
+> Finally finish the array with `end{array}`
 
 ```latex
 $$
 \begin{array}{c|lcr}
-	n & \text{左对齐} & \text{居中对齐} & \text{右对齐} \\
+	n & \text{left} & \text{center} & \text{right} \\
 	\hline
 	1 & 0.24 & 1 & 125 \\
 	2 & -1 & 189 & -8 \\
@@ -977,7 +978,7 @@ $$
 
 $$
 \begin{array}{c|lcr}
-	n & \text{左对齐} & \text{居中对齐} & \text{右对齐} \\
+	n & \text{left} & \text{center} & \text{right} \\
 	\hline
 	1 & 0.24 & 1 & 125 \\
 	2 & -1 & 189 & -8 \\
@@ -985,13 +986,13 @@ $$
 \end{array}
 $$
 
-## 方程组
+## Systems of equations
 
->  使用`\begin{array}…\end{array}`和`\left\{…\right.`来创建一个方程组 
+> Use `\begin{array}…\end{array}` and `\left\{…\right.` to create a system of equations
 
 ```latex
 $$
-\text{ 使用数组来实现 }
+\text{ using an array }
 \left\{ 
     \begin{array}{c}
         a_1x + b_1y + c_1z=d_1 \\ 
@@ -999,7 +1000,7 @@ $$
         a_3x + b_3y + c_3z=d_3
     \end{array}
 \right. 
-\\\text{ 使用条件表达式来实现 }
+\\\text{ using cases }
 \begin{cases}
     a_1x + b_1y + c_1z=d_1 \\ 
     a_2x + b_2y + c_2z=d_2 \\ 
@@ -1009,7 +1010,7 @@ $$
 ```
 
 $$
-\text{ 使用数组来实现 }
+\text{ using an array }
 \left\{ 
     \begin{array}{c}
         a_1x + b_1y + c_1z=d_1 \\ 
@@ -1017,7 +1018,7 @@ $$
         a_3x + b_3y + c_3z=d_3
     \end{array}
 \right.
-\\\text{ 使用条件表达式来实现 }
+\\\text{ using cases }
 \begin{cases}
     a_1x + b_1y + c_1z=d_1 \\ 
     a_2x + b_2y + c_2z=d_2 \\ 
@@ -1025,9 +1026,9 @@ $$
 \end{cases}
 $$
 
-##  连分数
+## Continued fractions
 
->  使用`\cfrac`来创建一个连分数 
+> Use `\cfrac` to create a continued fraction
 
 ```latex
 $$
@@ -1049,25 +1050,25 @@ x = a_0   + \cfrac{ 1^2 }{a_1
          	}
 $$
 
-## 交换图表
+## Commutative diagrams
 
-> 使用一行`\require{AMScd}`语句来允许交换图表的显示
+> Use a `\require{AMScd}` line to enable commutative diagrams
 >
-> 在开头使用`begin{CD}`
+> Start with `begin{CD}`
 >
-> 在中间插入图表元素，每个元素之间插入`&`，并在每行结尾处使用`\\` 
+> Put the diagram elements in between, separated by `&`, ending each row with `\\`
 >
-> 在结尾使用`end{CD}`
+> Finish with `end{CD}`
 
-| 符号    | 说明         |
-| ------ | ----------  |
-| @>>>   | 右箭头    	 |
-| @<<<   | 左箭头     	 |
-| @VVV   | 下箭头     	 |
-| @AAA   | 代表上箭头 	|
-| @=     | 水平双实线 	|
-| @\| | 垂直双实线 |
-| @.     | 没有箭头   	 |
+| Symbol | Description         |
+| ------ | ------------------- |
+| @>>>   | right arrow    	 |
+| @<<<   | left arrow     	 |
+| @VVV   | down arrow     	 |
+| @AAA   | up arrow       	|
+| @=     | horizontal double line 	|
+| @\| | vertical double line |
+| @.     | no arrow   	 |
 
 ```latex
 $$
@@ -1102,12 +1103,12 @@ $$
 \\
 \\
 \begin{CD}
-@>>{右箭头}> \\
-@<<{左箭头}< \\
-@VV{下箭头}V \\
-@AA{上箭头}A \\
-@={水平双实线} \\
-@|{垂直双实线} \\
-@.{没有箭头} \\
+@>>{right arrow}> \\
+@<<{left arrow}< \\
+@VV{down arrow}V \\
+@AA{up arrow}A \\
+@={horizontal double line} \\
+@|{vertical double line} \\
+@.{no arrow} \\
 \end{CD}
 $$

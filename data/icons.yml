@@ -1,0 +1,7 @@
+# 导航菜单图标：键 = config.toml 菜单项的 identifier，值 = 图标路径
+# 用于顶部 Projects 等下拉菜单（桌面 + 手机侧边栏），首页卡片另有 data/homepage/*.yml
+magic-tools: /images/project/magic-tools.png
+api-manager: /images/project/api-manager.png
+cache-manager: /images/project/cache-manager.png
+book-manager: /images/project/book-manager.png
+db-manager: /images/project/db-manager.png

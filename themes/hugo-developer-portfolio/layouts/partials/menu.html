@@ -6,10 +6,12 @@
   内部链接用 relLangURL 自动加语言前缀（如 /en/about/）；
   外部链接（http 开头）保持原样并新窗口打开；URL = "#" 视为纯父级（仅展开子菜单）。
   菜单名：有 identifier 时按 i18n 键翻译，缺失则用 name。
+  图标：子项的 identifier 若存在于 data/icons.yml，则在下拉/侧边栏中显示对应图标。
 */ -}}
 {{- $page := .page -}}
 {{- $mode := .mode -}}
 {{- $cur := $page.RelPermalink -}}
+{{- $icons := site.Data.icons | default dict -}}
 {{- range site.Menus.main -}}
   {{- $url := .URL -}}
   {{- $isExternal := hasPrefix $url "http" -}}
@@ -35,7 +37,10 @@
               {{- $curl := .URL -}}
               {{- $chref := $curl -}}
               {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relLangURL -}}{{- end -}}
-              <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+              {{- $cname := .Name -}}
+              {{- $icon := "" -}}
+              {{- with .Identifier }}{{ $icon = index $icons . | default "" }}{{ end -}}
+              <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ with $icon }}<img src="{{ . | relURL }}" alt="" width="18" height="18" style="margin-right: 8px; vertical-align: -4px; border-radius: 3px">{{ end }}{{ $cname }}</a></li>
             {{- end -}}
           </ul>
         </div>
@@ -48,7 +53,10 @@
             {{- $curl := .URL -}}
             {{- $chref := $curl -}}
             {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relLangURL -}}{{- end -}}
-            <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+            {{- $cname := .Name -}}
+            {{- $icon := "" -}}
+            {{- with .Identifier }}{{ $icon = index $icons . | default "" }}{{ end -}}
+            <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ with $icon }}<img src="{{ . | relURL }}" alt="" width="18" height="18" style="margin-right: 8px; vertical-align: -4px; border-radius: 3px">{{ end }}{{ $cname }}</a></li>
           {{- end -}}
         </ul>
       </li>

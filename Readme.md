@@ -60,17 +60,20 @@ just status          # 查看当前改动与最近提交
 
 | 语言 | 路径 | 内容文件 |
 | --- | --- | --- |
-| 简体中文（默认） | `/` | `content/xxx.md` |
+| English（默认） | `/` | `content/xxx.md` |
+| 简体中文 | `/zh-cn/` | `content/xxx.zh-cn.md` |
 | 繁體中文 | `/zh-hant/` | `content/xxx.zh-hant.md` |
-| English | `/en/` | `content/xxx.en.md` |
 
 - 语言配置：`config.toml` 的 `[languages.*]`；界面文案：`i18n/{zh-cn,zh-hant,en}.toml`
 - 首页数据：`data/homepage/{zh-cn,zh-hant,en}.yml`
 - 菜单只写一份（`[[menu.main]]`，`identifier` 作为 i18n 键自动翻译），内部链接自动带语言前缀
-- 繁体内容由 `just sync-hant`（`scripts/gen-hant.mjs` + OpenCC）从简体自动生成，**不要手改** `*.zh-hant.md`
-- 英文内容需手工维护 `*.en.md`
+- 繁体内容由 `just sync-hant`（`scripts/gen-hant.mjs` + OpenCC）从简体 `*.zh-cn.md` 自动生成，**不要手改** `*.zh-hant.md`
+- 英文内容需手工维护基础文件名 `*.md`（默认语言）
 
 ## 站点定制
+
+- **菜单图标**：`data/icons.yml`（键 = `config.toml` 菜单项的 `identifier`），用于顶部 Projects 下拉与手机侧边栏。
+- **图片路径**：一律写绝对路径 `/images/...`（语言子目录 `/zh-cn/` 下相对路径会 404）。
 
 - **顶部导航**：支持两级菜单。父级（如 `Projects`、`Books`）在 [`config.toml`](./config.toml) 中用 `identifier` + 子项 `parent` 关联，渲染逻辑在 [`themes/.../partials/menu.html`](./themes/hugo-developer-portfolio/layouts/partials/menu.html)（桌面端为 UIkit 下拉，手机端为侧边栏二级列表）。新增子项只需往 `config.toml` 的 `[[menu.main]]` 里加 `parent = "projects"`。
 - **网站图标**：源图是仓库根目录的 `logo.png`，执行 `just favicon` 重新生成 `static/favicon.ico`、`favicon-16x16.png`、`favicon-32x32.png`、`apple-touch-icon.png`、`android-chrome-*.png`、`site.webmanifest`（引用见主题 `partials/head.html`），改完记得 `just build`。

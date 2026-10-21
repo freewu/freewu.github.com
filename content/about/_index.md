@@ -1,14 +1,14 @@
 ---
 title: "About"
 date: 2019-05-12T12:14:34+06:00
-description: "Bluefrog` Resume"
+description: "Bluefrog's Resume"
 author : "bluefrog"
 ---
 
-### 基本信息
+### Basic info
 ```json
 {
-	"Name": "伍彬",
+	"Name": "伍彬 (Wu Bin)",
 	"BirthDay": "1982-06",
 	"Email": "bluefrog.wu@gmail.com",
 	"Mobile": "19907970927",
@@ -18,113 +18,115 @@ author : "bluefrog"
 }
 ```
 
-### 自我介绍
+### About me
 ```
-	19 年 电商 / 监控 / 物联网 / 互联网金融 / 生产管理 / SaaS 系统架构 & 开发经验
-	10 年以上小团队管理经验
-	多年的 toG / toB / toBank 项目落地 & 系统实施经验
-	多次甲方身份对接第三方技术供应商
-```
-
-### 掌握技能
-```
-	PHP 		19 年 项目架构能力 & 框架定制 & 扩展开发
-	Javascript  19 年 Vue / React / Electron 项目开发能力
-	Java 		9 年 基于 SpringBoot 的项目架构 & 基于 SpringCloud 的项目开发
-	Golang 		9 年 项目架构能力 & 框架开发能力 
-	Python 		9 年 项目架构能力
-	Rust		3 年 项目架构能力
+	19 years of architecture & development experience in e-commerce / monitoring /
+    IoT / internet finance / production management / SaaS systems
+	10+ years of small team management
+	Years of toG / toB / toBank project delivery & system implementation
+	Repeatedly acted as the client-side owner coordinating third-party tech vendors
 ```
 
-### 工作经历
-#### 2023.08 - Now 赣州蓝蛙网络科技有限公司
+### Skills
 ```
-# 2023.08 - Now 赣州蓝蛙网络科技有限公司
-
-	家具生产管理 Saas 系统
-	政务信息开发
-    园区管理系统
-    智慧农业系统
-	参与多个 LLM + RAG 项目开发
-	赣乐购小程序性能优化&功能开发(赣州银行)
-	智能营销平台功能开发(赣州银行)
-
+	PHP         19 years  Project architecture, framework customization, extension development
+	Javascript  19 years  Vue / React / Electron project development
+	Java         9 years  SpringBoot based architecture, SpringCloud based development
+	Golang       9 years  Project architecture & framework development
+	Python       9 years  Project architecture
+	Rust         3 years  Project architecture
 ```
 
-#### 2016.03 - 2023.08 中集集团 （ 7.5 年 ）
+### Work experience
+#### 2023.08 - Now Ganzhou Bluefrog Network Technology Co., Ltd.
 ```
-# 2022.07 - 2023.07 宁波中集物流装备有限公司  软件研发负责人
+# 2023.08 - Now Ganzhou Bluefrog Network Technology Co., Ltd.
 
-	软件开发团队组建,招聘,技术选型
-	主导智能停车系统 / 故障云平台 搭建开发
-	参与 P+ 项目软硬件设备供应商采购招标
+	Furniture production management SaaS system
+	Government information systems
+    Industrial park management system
+    Smart agriculture system
+	Participated in several LLM + RAG projects
+	Mini program performance optimization & feature development (Bank of Ganzhou)
+	Smart marketing platform feature development (Bank of Ganzhou)
 
-# 2020.09 - 2022.06 中集物联(深圳) 架构师
-
-	主导平面停车系统开发(基于 SpringBoot & SpringCloud )
-	参与 AGV 停车管理平台的开发(基于 Daper + Golang )
-	参与充电桩项目的调研 / 对接 / 落地 全流程
-
-# 2016.03 - 2020.08 中集电商(深圳) 架构师	
-
-	负责数据平台开发（基于 CHD + 自研报表平台）
-	负责网点规划系统的开发 ( 基于 WebGIS 提供快递柜布点建议 & 竞品分析 & 小区分析)
-	
 ```
 
-#### 2013.04 - 2016.02 Tencent(深圳) 运营开发工程师 （ 3 年 ）
-```	
-# 2014.07 - 2016.02 IEG 游戏运营部
+#### 2016.03 - 2023.08 CIMC Group (7.5 years)
+```
+# 2022.07 - 2023.07 Ningbo CIMC Logistics Equipment Co., Ltd.  Head of Software R&D
 
-	负责手游云平台的开发 & 维护 & 团队管理
-	参与手游 MSDK 的开发
-    负责手游排期系统的开发 & 维护
+	Built the software team, hiring and technology selection
+	Led the development of the smart parking system / fault cloud platform
+	Participated in the hardware & software vendor bidding of the P+ project
+
+# 2020.09 - 2022.06 CIMC IoT (Shenzhen)  Architect
+
+	Led the flat parking system development (SpringBoot & SpringCloud)
+	Participated in the AGV parking management platform (Daper + Golang)
+	Participated in the whole cycle of the charging pile project: research / integration / delivery
+
+# 2016.03 - 2020.08 CIMC E-commerce (Shenzhen)  Architect
+
+	Responsible for the data platform (CHD + in-house reporting platform)
+	Responsible for the site planning system (WebGIS based: parcel locker placement
+    suggestions & competitor analysis & community analysis)
+
+```
+
+#### 2013.04 - 2016.02 Tencent (Shenzhen)  Operations Development Engineer (3 years)
+```
+# 2014.07 - 2016.02 IEG Game Operations
+
+	Development, maintenance & team management of the mobile game cloud platform
+	Participated in the MSDK development for mobile games
+	Development & maintenance of the mobile game scheduling system
 
 # 2013.04 - 2014.07
 
-    负责数据平台部秒级监控系统的开发
-	参与微信监控平台的研发
-    负责数据平台部老系统的重构( C# -> PHP)
+	Development of the second-level monitoring system for the data platform department
+	Participated in the R&D of the WeChat monitoring platform
+	Refactored legacy systems of the data platform department (C# -> PHP)
 
 ```
 
-#### 2009.01 - 2013.03 Shopex(上海) 高级系统开发工程师 （ 4 年  ）
+#### 2009.01 - 2013.03 ShopEx (Shanghai)  Senior System Development Engineer (4 years)
 ```
-# 2009.01 - 2010.11 B2B 开发组
+# 2009.01 - 2010.11 B2B team
 
-    负责 B2B(分销王) 核心开发
-    负责 B2B(分销王) Saas系统开发
-    负责 B2B 团队新人培养
+	Core development of B2B (Fenxiaowang)
+	SaaS system development of B2B (Fenxiaowang)
+	Onboarding & mentoring of new B2B team members
 
-# 2010.11 - 2013.03 系统架构组
+# 2010.11 - 2013.03 System Architecture team
 
-	参与公司 ECStore 核心系统 & SaaS 开发 (ShopEX 485 / Ecstore )
-	参与公司基于 Erlang 开发的 ECOS 电商云 PaaS 平台的开发
-	主导公司 模板交易平台的架构&开发(月均订单 10W + )
+	Participated in the ECStore core system & SaaS development (ShopEx 485 / Ecstore)
+	Participated in the Erlang-based ECOS e-commerce cloud PaaS platform
+	Led the architecture & development of the template marketplace (100k+ orders per month)
 
-```
-
-#### 2008.02 - 2008.12 Gooyaa(深圳) PHP开发工程师 （  1 年  ）
-```
-	负现爬虫后台的 CMS 管理系统的开发
-	使用 UCHome + UCenter 整合多个论坛和户外 SNS 系统(Discuz)
 ```
 
-#### 2007.06 - 2007.12 Baituo(南昌) ASP/PHP开发工程师 （ 0.5 年 ）
+#### 2008.02 - 2008.12 Gooyaa (Shenzhen)  PHP Developer (1 year)
 ```
-	使用 ASP + Access & PHP + Mysql 从事企业建站相关工作
-	主导开发了5个企业站和1个政务系统
-	进销存管理系统开发
-```
-
-### 教育经历
-```
-	2004-2008 南昌大学 信息管理与信息系统专业
+	CMS development for the crawler backend
+	Integrated multiple forums and outdoor SNS sites (Discuz) with UCHome + UCenter
 ```
 
-### 所获证书
+#### 2007.06 - 2007.12 Baituo (Nanchang)  ASP/PHP Developer (0.5 year)
 ```
-	2007 大学英语等级考试 四级
-	2007 计算机技术与软件专业技术资格(水平)考试 软件设计师
-	2008 南昌大学管理学学士
+	Corporate websites with ASP + Access and PHP + MySQL
+	Led the development of 5 corporate sites and 1 government system
+	Inventory management system development
+```
+
+### Education
+```
+	2004-2008 Nanchang University, Information Management and Information Systems
+```
+
+### Certifications
+```
+	2007 CET-4 (College English Test Band 4)
+	2007 Software Designer, Computer Technology and Software Professional Qualification Exam
+	2008 Bachelor of Management, Nanchang University
 ```

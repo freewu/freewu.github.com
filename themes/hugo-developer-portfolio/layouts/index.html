@@ -86,21 +86,21 @@
         {{ if $home.social.weibo }}
             <li>
                 <a href="https://weibo.com/{{ $home.social.weibo}}">
-                    <img class="contain" src="./images/social/weibo.png" alt="Weibo" loading="lazy">
+                    <img class="contain" src="{{ "images/social/weibo.png" | relURL }}" alt="Weibo" loading="lazy">
                 </a>
             </li>
         {{ end }}
         {{ if $home.social.douban }}
             <li>
                 <a href="https://douban.com/people/{{ $home.social.douban}}">
-                    <img class="contain" src="./images/social/douban.png" alt="Douban" loading="lazy">
+                    <img class="contain" src="{{ "images/social/douban.png" | relURL }}" alt="Douban" loading="lazy">
                 </a>
             </li>
         {{ end }}
         {{ if $home.social.leetcode }}
         <li>
             <a href="https://leetcode.com/{{ $home.social.leetcode}}">
-                <img class="contain" src="./images/social/leetcode.png" alt="Leetcode" loading="lazy">
+                <img class="contain" src="{{ "images/social/leetcode.png" | relURL }}" alt="Leetcode" loading="lazy">
             </a>
         </li>
     {{ end }}

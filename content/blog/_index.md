@@ -1,5 +1,5 @@
 ---
-title: "博客"
+title: "Blog"
 date: 2019-05-12T12:14:34+06:00
-description: "技术笔记与教程"
+description: "Technical notes and tutorials"
 ---

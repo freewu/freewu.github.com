@@ -6,6 +6,6 @@ author: bluefrog
 title:  Bluefrog' Website
 description: "Bluefrog' Website"
 images:
-- images/logo.png.png
+- /images/logo.png
 ---
 

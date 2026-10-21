@@ -7,7 +7,7 @@
 - 基于 [Hugo](https://gohugo.io/) 的个人站点，主题 `hugo-developer-portfolio`
 - 构建产物输出到 `docs/`（`config.toml` 中 `publishDir = "docs"`），由 **GitHub Pages** 发布
 - 任务统一用 [just](https://github.com/casey/just) 管理，见 `justfile`
-- **多语言**：简体中文（默认，根路径 `/`）、繁體中文（`/zh-hant/`）、English（`/en/`），顶部导航右侧 🌐 下拉切换
+- **多语言**：English（默认，根路径 `/`）、简体中文（`/zh-cn/`）、繁體中文（`/zh-hant/`），顶部导航右侧 🌐 下拉切换
 - 源码仓库：`origin` = `https://github.com/freewu/freewu.github.com.git`（主分支 `master`）
 - 部署仓库（备用）：`git@github.com:freewu/freewu.github.io.git`
 
@@ -88,6 +88,8 @@ just status          # 查看改动与最近提交
 ## 导航与图标
 
 - **顶部导航支持两级菜单**：`config.toml` 的 `[[menu.main]]` 中，父级用 `identifier = "projects"`（`URL = "#"` 表示只展开不跳转），子项用 `parent = "projects"` 关联；外部链接（`https://...`）会新窗口打开。渲染在 `themes/hugo-developer-portfolio/layouts/partials/menu.html`：桌面端用 UIkit 下拉（`uk-navbar-dropdown`），手机侧边栏用 `uk-nav-sub` 二级列表。新增子项只需加一条带 `parent` 的菜单项。
+- **菜单图标**：`data/icons.yml` 以菜单项 `identifier` 为键配置图标路径，`partials/menu.html` 会在下拉菜单与手机侧边栏里渲染 18×18 小图标（目前用于 Projects 的 5 个子项）。新增带图标的菜单项：在 `config.toml` 给子项加 `identifier`，再到 `data/icons.yml` 加一行即可。
+- **图片路径统一用绝对路径**（`/images/...`）：站点是多语言且语言有子目录（`/zh-cn/`、`/zh-hant/`），`./images/...` 这类相对路径会解析成 `/zh-cn/images/...` 导致 404。data/内容里的图片路径、模板里的 `img src` 都要写 `/images/` 或以 `relURL` 输出。
 - **网站图标（favicon）**：源图是仓库根目录的 `logo.png`（正方形，2048x2048）。改动图标后执行 `just favicon` 重新生成 `static/favicon.ico`、`favicon-16x16.png`、`favicon-32x32.png`、`apple-touch-icon.png`、`android-chrome-{192,512}.png`、`site.webmanifest`（脚本：`scripts/gen-favicon.py`，需 Pillow），然后 `just build` 同步到 `docs/`。引用位置：主题 `partials/head.html`。
 
 ## 多语言（简体 / 繁体 / English）
@@ -96,18 +98,20 @@ just status          # 查看改动与最近提交
 
 | 语言 | 配置 key | 路径 | 内容文件 |
 | --- | --- | --- | --- |
-| 简体中文（默认） | `zh-cn` | `/` | `content/xxx.md` |
+| English（默认） | `en` | `/` | `content/xxx.md` |
+| 简体中文 | `zh-cn` | `/zh-cn/` | `content/xxx.zh-cn.md` |
 | 繁體中文 | `zh-hant` | `/zh-hant/` | `content/xxx.zh-hant.md` |
-| English | `en` | `/en/` | `content/xxx.en.md` |
+
+> **默认语言 = English**，按 Hugo 约定默认语言使用「无后缀」文件名；`en` 的 `weight = 1`（`hreflang x-default` 取权重最小的语言，`partials/head.html` 依赖这个不变量），简体 `zh-cn` = 2，繁体 `zh-hant` = 3。
 
 - 语言定义在 `config.toml` 的 `[languages.*]`（`label` / `locale` / `weight` / `params.home` / `params.languageLabel` / `params.description`）。默认语言不加子目录（`defaultContentLanguageInSubdir = false`），Hugo 会自动生成 `/zh-cn/` → `/` 的跳转别名。
 - **界面文案**在 `i18n/{zh-cn,zh-hant,en}.toml`，模板中用 `{{ i18n "key" }}` 取值；新增文案必须三份都补齐。
 - **菜单**只在 `config.toml` 的 `[[menu.main]]` 定义一份，`identifier` 同时作为 i18n 键（`about` / `blog` / `categories` / `projects` / `books`）自动翻译名称；内部链接用 `relLangURL` 自动加语言前缀（`partials/menu.html`）。
 - **语言切换器**：`partials/language-switcher.html`（桌面下拉 + 手机侧边栏）。优先跳到当前页面的同语言译文，该语言没有译文时回退到该语言首页；`partials/head.html` 会为每个页面输出 `hreflang` 链接（含 `x-default`）。
 - **首页数据**按语言拆分到 `data/homepage/zh-cn.yml`、`zh-hant.yml`、`en.yml`，`layouts/index.html` 用 `index hugo.Data.homepage site.Language.Lang` 读取。
-- **繁体内容是生成物**：`just sync-hant` 用 OpenCC（`scripts/gen-hant.mjs`，配置默认 `twp`，可用 `OPENCC_TO=tw|hk|twp` 覆盖）把简体内容转换成 `*.zh-hant.md`，**不要手改**。修改简体内容（或新增文章）后必须重新执行 `just sync-hant`，再 `just build`。首次运行会自动 `npm --prefix scripts install`（依赖 `opencc-js`，仅本地需要，CI 用不到）。
-- **英文内容需手工维护** `*.en.md`（front matter 的 `title` / `description` 也一并翻译）。
-- 新增一篇文章后，三份文件（`xxx.md`、`xxx.zh-hant.md`、`xxx.en.md`）都要存在，否则对应语言导航/列表会缺页。
+- **繁体内容是生成物**：`just sync-hant` 用 OpenCC（`scripts/gen-hant.mjs`，配置默认 `twp`，可用 `OPENCC_TO=tw|hk|twp` 覆盖）把 `*.zh-cn.md` 转换成 `*.zh-hant.md`，**不要手改**。修改简体内容（或新增文章）后必须重新执行 `just sync-hant`，再 `just build`。首次运行会自动 `npm --prefix scripts install`（依赖 `opencc-js`，仅本地需要，CI 用不到）。
+- **英文内容需手工维护** 基础文件名 `*.md`（默认语言，front matter 的 `title` / `description` 也一并翻译）。
+- 新增一篇文章后，三份文件（`xxx.md`（英）、`xxx.zh-cn.md`（简）、`xxx.zh-hant.md`（繁））都要存在，否则对应语言导航/列表会缺页。
 
 ## 目录说明
 
@@ -118,6 +122,7 @@ content/             文章与页面（Markdown）
 content/blog/        博客文章
 i18n/                界面文案（zh-cn / zh-hant / en）
 data/homepage/       首页数据（按语言拆分）
+data/icons.yml       导航菜单图标（键 = 菜单 identifier）
 content/about/       About 页面
 data/homepage.yml    首页数据
 static/images/       静态图片
@@ -135,5 +140,5 @@ build.sh              历史脚本（已过时，功能由 justfile 替代）
 
 - 回复与提交信息使用中文优先。
 - 修改主题 `layouts/` 属于源码改动，同样需要提交推送。
-- 新增/修改任何界面文案时，同步更新 `i18n/` 三个语言文件；内容改动后跑 `just sync-hant`，并确认 `*.en.md` 是否需要同步。
+- 新增/修改任何界面文案时，同步更新 `i18n/` 三个语言文件；内容改动后跑 `just sync-hant`（简→繁），并确认英文 `*.md` 是否需要同步。
 - 发布流程：`just serve` 本地确认 → `just release "msg"` → GitHub Actions 自动部署。

@@ -10,10 +10,11 @@
   <meta name="author" content="{{ with .Site.Params.Author }}{{ . }}{{ else }}{{ with .Site.Params.author }}{{ . }}{{ end }}{{ end }}">
   {{ hugo.Generator }}
 
-  {{ "<!-- hreflang：多语言 SEO 声明 -->" | safeHTML }}
+  {{ "<!-- hreflang：多语言 SEO 声明（x-default 指向默认语言：权重最小的语言，当前为英文） -->" | safeHTML }}
+  {{- $defaultLang := (index hugo.Sites 0).Language.Lang }}
   {{- range .AllTranslations }}
   <link rel="alternate" hreflang="{{ .Language.Locale | default .Language.Lang }}" href="{{ .Permalink }}">
-  {{- if eq .Language.Lang "zh-cn" }}
+  {{- if eq .Language.Lang $defaultLang }}
   <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
   {{- end }}
   {{- end }}

@@ -11,19 +11,30 @@ themesDir = "./themes"
 theme = "hugo-developer-portfolio"
 
 # ═══════════════════════════════════════════════════════════════
-#  多语言：简体中文（默认，根路径 /） / 繁體中文（/zh-hant/） / English（/en/）
-#  内容文件命名：xxx.md（简） / xxx.zh-hant.md（繁） / xxx.en.md（英）
+#  多语言：English（默认，根路径 /） / 简体中文（/zh-cn/） / 繁體中文（/zh-hant/）
+#  内容文件命名：xxx.md（英，默认语言） / xxx.zh-cn.md（简） / xxx.zh-hant.md（繁）
 #  繁体内容由 `just sync-hant` 从简体内容自动转换生成，勿手改
 # ═══════════════════════════════════════════════════════════════
-defaultContentLanguage = "zh-cn"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [languages]
-  # ── 简体中文（默认语言，根路径）────────────────────────────
+  # ── English（默认语言，根路径）──────────────────────────────
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 1
+    title = "Bluefrog Pages"
+    [languages.en.params]
+      home = "Home"
+      languageLabel = "EN"
+      description = "Bluefrog (Wu Bin), a full-stack developer in Shenzhen, China: projects, books and tech blog."
+
+  # ── 简体中文（/zh-cn/）───────────────────────────────────
   [languages.zh-cn]
     label = "简体中文"
     locale = "zh-CN"
-    weight = 1
+    weight = 2
     title = "Bluefrog Pages"
     [languages.zh-cn.params]
       home = "首页"
@@ -34,23 +45,12 @@ defaultContentLanguageInSubdir = false
   [languages.zh-hant]
     label = "繁體中文"
     locale = "zh-Hant"
-    weight = 2
+    weight = 3
     title = "Bluefrog Pages"
     [languages.zh-hant.params]
       home = "首頁"
       languageLabel = "繁體"
       description = "Bluefrog（伍彬）的個人站點：全端開發、開源專案與技術部落格。"
-
-  # ── English（/en/）────────────────────────────────────────
-  [languages.en]
-    label = "English"
-    locale = "en-US"
-    weight = 3
-    title = "Bluefrog Pages"
-    [languages.en.params]
-      home = "Home"
-      languageLabel = "EN"
-      description = "Bluefrog (Wu Bin), a full-stack developer in Shenzhen, China: projects, books and tech blog."
 
 # Plugins
 [params.plugins]
@@ -92,6 +92,7 @@ defaultContentLanguageInSubdir = false
   weight = 3
 
   # ── 二级菜单：Projects ──────────────────────────────────────────
+  #    子项 identifier 同时作为图标键，对应 data/icons.yml 里的图标路径
   [[menu.main]]
     name = "Projects"
     identifier = "projects"
@@ -100,30 +101,35 @@ defaultContentLanguageInSubdir = false
 
   [[menu.main]]
     name = "Magic Tools"
+    identifier = "magic-tools"
     parent = "projects"
     URL = "https://freewu.github.io/magic-tools/"
     weight = 1
 
   [[menu.main]]
     name = "API Manager"
+    identifier = "api-manager"
     parent = "projects"
     URL = "https://freewu.github.io/api-manager/"
     weight = 2
 
   [[menu.main]]
     name = "Cache Manager"
+    identifier = "cache-manager"
     parent = "projects"
     URL = "https://freewu.github.io/cache-manager/"
     weight = 3
 
   [[menu.main]]
     name = "Book Manager"
+    identifier = "book-manager"
     parent = "projects"
     URL = "https://freewu.github.io/book-manager/"
     weight = 4
 
   [[menu.main]]
     name = "DB Manager"
+    identifier = "db-manager"
     parent = "projects"
     URL = "https://freewu.github.io/db-manager/"
     weight = 5
