@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{- /* 各语言首页数据：data/homepage/<lang>.yml */ -}}
+{{- $home := index hugo.Data.homepage site.Language.Lang -}}
 {{ "<!-- Hexagon Stylesheet -->" | safeHTML }}
 {{ $hexagons := resources.Get "css/hexagon.css" | minify }}
 <link rel="stylesheet" href="{{ $hexagons.Permalink | relURL}}">
@@ -16,19 +18,19 @@
 
  -->
 <section>
-    {{ if hugo.Data.homepage.banner.image }}
+    {{ if $home.banner.image }}
     <div class="uk-container">
         <div class="uk-flex-center" uk-grid>
             <div class="uk-width-1-2 uk-width-1-3@s">
-                <img src="{{ hugo.Data.homepage.banner.image }}" alt="author">
+                <img src="{{ $home.banner.image }}" alt="author">
             </div>
         </div>
     </div>
     {{ end }}
     <div class="uk-container uk-margin-large-top uk-margin-xlarge-bottom">
 
-        <!-- <h3 class="uk-heading-large">{{ hugo.Data.homepage.banner.title | safeHTML }}</h3> -->
-        <h1>{{ hugo.Data.homepage.banner.title | safeHTML }}</h1>
+        <!-- <h3 class="uk-heading-large">{{ $home.banner.title | safeHTML }}</h3> -->
+        <h1>{{ $home.banner.title | safeHTML }}</h1>
     </div>
 
 
@@ -45,64 +47,59 @@
 -->
 <div class="uk-text-center uk-margin-xlarge-bottom uk-margin-xlarge-top">
     <ul id="links" class="icons">
-        {{ range hugo.Sites -}}
-        {{ if ne .Language.Label $.Site.Language.Label }}
-        <li><a href="/{{ .Language.Lang }}">{{ .Language.Label }}</a></li>
-        {{ end }}
-        {{ end }}
-        {{ if hugo.Data.homepage.social.twitter }}
-        <li><a href="https://twitter.com/{{ hugo.Data.homepage.social.twitter }}" > <img
+        {{ if $home.social.twitter }}
+        <li><a href="https://twitter.com/{{ $home.social.twitter }}" > <img
                     class="contain" src="https://cdn.svgporn.com/logos/twitter.svg" alt="Twitter" loading="lazy"></a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.linkedin }}
-        <li><a href="https://www.linkedin.com/in/{{ hugo.Data.homepage.social.linkedin }}">
+        {{ end }} {{ if $home.social.linkedin }}
+        <li><a href="https://www.linkedin.com/in/{{ $home.social.linkedin }}">
             <img class="contain" src="https://cdn.svgporn.com/logos/linkedin-icon.svg" alt="LinkedIn" loading="lazy"> </a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.bitbucket }}
-        <li><a href="https://bitbucket.org/{{ hugo.Data.homepage.social.bitbucket }}"> <img
+        {{ end }} {{ if $home.social.bitbucket }}
+        <li><a href="https://bitbucket.org/{{ $home.social.bitbucket }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/bitbucket.svg" alt="Bitbucket" loading="lazy"> </a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.github }}
-        <li><a href="https://github.com/{{ hugo.Data.homepage.social.github }}"> <img
+        {{ end }} {{ if $home.social.github }}
+        <li><a href="https://github.com/{{ $home.social.github }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/github-icon.svg" alt="GitHub" loading="lazy"> </a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.gitlab }}
-        <li><a href="https://gitlab.com/{{ hugo.Data.homepage.social.gitlab }}"> <img
+        {{ end }} {{ if $home.social.gitlab }}
+        <li><a href="https://gitlab.com/{{ $home.social.gitlab }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/gitlab.svg" alt="GitLab" loading="lazy"></a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.facebook }}
-        <li><a href="https://www.facebook.com/{{ hugo.Data.homepage.social.facebook }}"> <img
+        {{ end }} {{ if $home.social.facebook }}
+        <li><a href="https://www.facebook.com/{{ $home.social.facebook }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/facebook.svg" alt="Facebook" loading="lazy"></a></li>
-        {{ end }} {{ if hugo.Data.homepage.social.instagram }}
-        <li><a href="https://instagram.com/{{ hugo.Data.homepage.social.instagram }}"> <img
+        {{ end }} {{ if $home.social.instagram }}
+        <li><a href="https://instagram.com/{{ $home.social.instagram }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/instagram-icon.svg" alt="Instagram" loading="lazy"></a></li>
-        {{ end }}{{ if hugo.Data.homepage.social.gmail }}
-        <li><a href="mailto:{{ hugo.Data.homepage.social.gmail }}@gmail.com" > <img
+        {{ end }}{{ if $home.social.gmail }}
+        <li><a href="mailto:{{ $home.social.gmail }}@gmail.com" > <img
                     class="contain" src="https://cdn.svgporn.com/logos/google-gmail.svg" alt="Gmail" loading="lazy"></a></li>
-        {{ end }}{{ if hugo.Data.homepage.social.hotmail }}
-        <li><a href="mailto:{{ hugo.Data.homepage.social.hotmail }}@hotmail.com" > <img
+        {{ end }}{{ if $home.social.hotmail }}
+        <li><a href="mailto:{{ $home.social.hotmail }}@hotmail.com" > <img
                     class="contain" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftoutlook.svg" alt="Hotmail" loading="lazy"></a></li>
         {{ end }} 
-        {{ if hugo.Data.homepage.social.telegram }}
-        <li><a href="https://t.me/{{ hugo.Data.homepage.social.telegram }}"> <img
+        {{ if $home.social.telegram }}
+        <li><a href="https://t.me/{{ $home.social.telegram }}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/telegram.svg" alt="Telegram" loading="lazy"></a></li>
         {{ end }} 
-        {{ if hugo.Data.homepage.social.whatsapp }}
-        <li><a href="https://wa.me/{{ hugo.Data.homepage.social.whatsapp}}"> <img
+        {{ if $home.social.whatsapp }}
+        <li><a href="https://wa.me/{{ $home.social.whatsapp}}"> <img
                     class="contain" src="https://cdn.svgporn.com/logos/whatsapp.svg" alt="Whatsapp" loading="lazy"></a></li>
         {{ end }}
-        {{ if hugo.Data.homepage.social.weibo }}
+        {{ if $home.social.weibo }}
             <li>
-                <a href="https://weibo.com/{{ hugo.Data.homepage.social.weibo}}">
+                <a href="https://weibo.com/{{ $home.social.weibo}}">
                     <img class="contain" src="./images/social/weibo.png" alt="Weibo" loading="lazy">
                 </a>
             </li>
         {{ end }}
-        {{ if hugo.Data.homepage.social.douban }}
+        {{ if $home.social.douban }}
             <li>
-                <a href="https://douban.com/people/{{ hugo.Data.homepage.social.douban}}">
+                <a href="https://douban.com/people/{{ $home.social.douban}}">
                     <img class="contain" src="./images/social/douban.png" alt="Douban" loading="lazy">
                 </a>
             </li>
         {{ end }}
-        {{ if hugo.Data.homepage.social.leetcode }}
+        {{ if $home.social.leetcode }}
         <li>
-            <a href="https://leetcode.com/{{ hugo.Data.homepage.social.leetcode}}">
+            <a href="https://leetcode.com/{{ $home.social.leetcode}}">
                 <img class="contain" src="./images/social/leetcode.png" alt="Leetcode" loading="lazy">
             </a>
         </li>
@@ -121,13 +118,13 @@
  /_/    \_\ |_.__/   \___/   \__,_|  \__|
 
 -->
-{{ if hugo.Data.homepage.about.enable }}
+{{ if $home.about.enable }}
 <!-- about -->
 
 <section class="uk-margin-large-top">
     <div class="uk-container">
         <div class="uk-text-center">
-            {{ with hugo.Data.homepage.about }}
+            {{ with $home.about }}
             <p class="uk-text-lead">{{.content | markdownify}}</p>
             {{ with .button }}
             <a class="uk-button uk-button-text" href="{{.URL| absURL}}">{{.btnText}}</a>
@@ -146,12 +143,12 @@
 
 
 <!-- portfolio -->
-{{ if hugo.Data.homepage.portfolio.enable }}
+{{ if $home.portfolio.enable }}
 
 <section class="uk-margin-large-bottom uk-margin-large-top">
     <div class="uk-container">
-        <h1 class="uk-heading-line  uk-heading-medium"><span>Portfolio</span></h1>
-        {{ range hugo.Data.homepage.portfolio.item }}
+        <h1 class="uk-heading-line  uk-heading-medium"><span>{{ i18n "portfolio" }}</span></h1>
+        {{ range $home.portfolio.item }}
         <div>
         <h2 class="uk-text-center uk-text-bold uk-margin-large-top"> {{.title}} </h2>
         <div class="uk-flex uk-flex-center">
@@ -168,7 +165,7 @@
             </div>
         </div>
         <div class="uk-flex uk-flex-center uk-margin-medium-top"> 
-        <a href="{{.link}}" class="uk-text-center">Find out more</a>
+        <a href="{{.link}}" class="uk-text-center">{{ i18n "find_out_more" }}</a>
         </div>
         </div>
         {{end}}
@@ -189,9 +186,9 @@
 
 
 -->
-{{ if hugo.Data.homepage.skill.enable }}
+{{ if $home.skill.enable }}
 
-<!-- {{ range hugo.Data.homepage.skill.item }}
+<!-- {{ range $home.skill.item }}
 <div id="modal_{{cond (isset . "titlealt") .titlealt (replaceRE "\\W" "_" .title) }}" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
         <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -209,11 +206,11 @@
         <p class="uk-text-center uk-text-lead"><i>Click the images below to find out more</i></p> -->
         <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
             uk-grid>
-            {{ range hugo.Data.homepage.skill.item }}
+            {{ range $home.skill.item }}
             <div class="imagemargin">
                 <img 
                     class="contain skills" src="{{.logo}}" 
-                    title="{{.year}} years experience use {{.title}}" loading="lazy" style="cursor: pointer" />
+                    title="{{ i18n "years_experience" (dict "Count" .year) }} {{.title}}" loading="lazy" style="cursor: pointer" />
                 <span
                     style="margin-top: -70px; margin-left: -12px;" 
                     class="uk-badge uk-badge-notification">{{.year}}</span>
@@ -237,14 +234,14 @@
 {{ end }}
 
 <!-- projects -->
-{{ if hugo.Data.homepage.project.enable }}
+{{ if $home.project.enable }}
 
 <section class="uk-margin-large-top uk-margin-large-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Projects</span></h1>
+        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>{{ i18n "projects" }}</span></h1>
         <div class="uk-child-width-1-3@m uk-child-width-1-2@s uk-child-width-1-1 uk-text-center uk-flex-center"
             uk-grid uk-height-match="target: > div > .uk-card">
-            {{ range hugo.Data.homepage.project.item }}
+            {{ range $home.project.item }}
             <div>
                 <div class="uk-card uk-card-default uk-card-hover">
                     <div class="uk-card-media-top">
@@ -259,8 +256,8 @@
                         </h3>
                         <p>{{.description}}</p>
                         <p class="uk-margin-remove-bottom">
-                            {{ with .link }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">在线体验 ↗</a>{{ end }}
-                            {{ with .repo }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">源码</a>{{ end }}
+                            {{ with .link }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">{{ i18n "try_online" }}</a>{{ end }}
+                            {{ with .repo }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">{{ i18n "source_code" }}</a>{{ end }}
                         </p>
                     </div>
                 </div>
@@ -276,14 +273,14 @@
 
 
 <!-- books -->
-{{ if hugo.Data.homepage.book.enable }}
+{{ if $home.book.enable }}
 
 <section class="uk-margin-large-top uk-margin-xlarge-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Books</span></h1>
+        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>{{ i18n "books" }}</span></h1>
         <div class="uk-child-width-1-3@m uk-child-width-1-2@s uk-child-width-1-1 uk-text-center uk-flex-center"
             uk-grid uk-height-match="target: > div > .uk-card">
-            {{ range hugo.Data.homepage.book.item }}
+            {{ range $home.book.item }}
             <div>
                 <div class="uk-card uk-card-default uk-card-hover">
                     <div class="uk-card-media-top">
@@ -298,8 +295,8 @@
                         </h3>
                         <p>{{.description}}</p>
                         <p class="uk-margin-remove-bottom">
-                            {{ with .link }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">在线阅读 ↗</a>{{ end }}
-                            {{ with .repo }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">源码</a>{{ end }}
+                            {{ with .link }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">{{ i18n "read_online" }}</a>{{ end }}
+                            {{ with .repo }}<a class="uk-button uk-button-text" href="{{.}}" target="_blank" rel="noopener">{{ i18n "source_code" }}</a>{{ end }}
                         </p>
                     </div>
                 </div>
@@ -332,16 +329,16 @@
 
 
 <!-- experience -->
-{{ if hugo.Data.homepage.experience.enable }}
+{{ if $home.experience.enable }}
 
 <section class="uk-margin-large-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line  uk-heading-medium"><span>Experience</span></h1>
+        <h1 class="uk-heading-line  uk-heading-medium"><span>{{ i18n "experience" }}</span></h1>
 
         <div class="uk-child-width-1-4@m uk-child-width-1-2  uk-text-center uk-flex-center" uk-grid
             style="padding-left: 20px; padding-right: 20px">
 
-            {{ range hugo.Data.homepage.experience.item }}
+            {{ range $home.experience.item }}
             <div>
                 <div class="uk-card uk-card-default uk-height-large">
                     <div class="uk-card-media-top">
@@ -369,17 +366,17 @@
 
 
 <!-- Certifications -->
-{{ if hugo.Data.homepage.certifications.enable }}
+{{ if $home.certifications.enable }}
 
 
 <section class="uk-margin-large-top uk-margin-medium-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line  uk-heading-medium"><span>Certifications</span></h1>
+        <h1 class="uk-heading-line  uk-heading-medium"><span>{{ i18n "certifications" }}</span></h1>
 
-        <p class="uk-text-center uk-text-lead"><i>Click the images below to view the proof</i></p>
+        <p class="uk-text-center uk-text-lead"><i>{{ i18n "click_to_view_proof" }}</i></p>
         <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
              uk-grid >
-            {{ range hugo.Data.homepage.certifications.item }}
+            {{ range $home.certifications.item }}
             <a href="{{.url}}" class="imagemargin">
                 <img class="contain certs" src="{{.image}}" alt="{{.title}}" loading="lazy" style="cursor: pointer">
                 {{.title}}
@@ -403,16 +400,16 @@
 
 
 <!-- Awards -->
-{{ if hugo.Data.homepage.awards.enable }}
+{{ if $home.awards.enable }}
 
 
 <section class="uk-margin-large-top uk-margin-medium-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-heading-medium"><span>Awards and Achievements</span></h1>
+        <h1 class="uk-heading-line uk-heading-medium"><span>{{ i18n "awards" }}</span></h1>
 
         <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
             uk-grid uk-height-match="target: > div > h4">
-            {{ range hugo.Data.homepage.awards.item }}
+            {{ range $home.awards.item }}
             <div class="imagemargin">
                 <img class="contain certs" src="{{.image}}" alt="{{.title}}" loading="lazy" >
                 <h4>{{.title}}</h4>
@@ -435,17 +432,17 @@
 <!-- /Awards -->
 
 <!--Hackathons-->
-{{ if hugo.Data.homepage.hackathons.enable }}
+{{ if $home.hackathons.enable }}
 
 <section class="uk-margin-large-bottom">
     <div class="uk-container">
-        <h1 class="uk-heading-line uk-heading-medium "><span>Hackathons</span></h1>
+        <h1 class="uk-heading-line uk-heading-medium "><span>{{ i18n "hackathons" }}</span></h1>
     </div>
-    <p class="uk-text-center uk-text-lead"><i>Hover over the logos to find out more</i></p>
+    <p class="uk-text-center uk-text-lead"><i>{{ i18n "hover_for_more" }}</i></p>
 </section>
 <div class="uk-container uk-margin-large-bottom uk-text-center">
     <ul id="hexGrid">
-        {{range hugo.Data.homepage.hackathons.item}}
+        {{range $home.hackathons.item}}
         <li class="hex">
             <div class="hexIn">
                 <div class="hexLink">
@@ -496,18 +493,18 @@
 
 
 -->
-{{ if hugo.Data.homepage.education.enable }}
+{{ if $home.education.enable }}
 <!-- education -->
 <section class="uk-margin-xlarge-bottom">
     <div class="uk-container">
 
-        <h1 class="uk-heading-line uk-heading-medium  uk-margin-large-bottom"><span>Education</span></h1>
+        <h1 class="uk-heading-line uk-heading-medium  uk-margin-large-bottom"><span>{{ i18n "education" }}</span></h1>
 
 
         <div class=" uk-grid-large uk-child-width-1-3@s uk-child-width-1  uk-text-center uk-flex-center" uk-grid
             style="padding-left: 20px; padding-right: 20px">
 
-            {{ range hugo.Data.homepage.education.item }}
+            {{ range $home.education.item }}
             <div>
                 <div class="uk-card uk-card-default uk-height-max-large">
                     <div class="uk-card-media-top">
@@ -529,15 +526,15 @@
 
 
 
-{{ if hugo.Data.homepage.publications.enable }}
+{{ if $home.publications.enable }}
 <!-- publication -->
 <section class="uk-margin-xlarge-bottom">
     <div class="uk-container">
 
-        <h1 class="uk-heading-line uk-heading-medium  uk-margin-large-bottom"><span>Publications</span></h1>
+        <h1 class="uk-heading-line uk-heading-medium  uk-margin-large-bottom"><span>{{ i18n "publications" }}</span></h1>
 
 
-            {{ range hugo.Data.homepage.publications.item }}
+            {{ range $home.publications.item }}
             <div class="uk-margin-large-bottom">
               <div class="uk-container">
                 <div class="uk-flex-center" uk-grid uk-height-match=".publication">

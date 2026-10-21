@@ -30,6 +30,7 @@ just serve 8080      # 指定端口
 just preview         # 等价于 just serve
 
 just new my-post     # 新建文章 content/blog/my-post.md
+just sync-hant       # 由简体内容生成繁体内容（OpenCC，需 Node.js）
 just drafts          # 列出所有草稿
 just posts           # 列出所有文章
 
@@ -52,6 +53,22 @@ just status          # 查看当前改动与最近提交
 > WSL 下自动探测 hugo：优先 `$HUGO`，其次 `hugo`、`hugo.exe`（无需手动指定）。如需强制某个版本：`HUGO=/path/to/hugo just build`。
 
 > ⚠️ `docs/` 里除了 Hugo 生成的页面，还有**手工维护的内容**（`magic-tools/`、`resume/`、`api-manager/` 等），所以构建**不能**加 `--cleanDestinationDir`，`just clean` 也不会删除 `docs/`。
+
+## 多语言（简 / 繁 / EN）
+
+站点支持三种语言，右上角 🌐 下拉切换：
+
+| 语言 | 路径 | 内容文件 |
+| --- | --- | --- |
+| 简体中文（默认） | `/` | `content/xxx.md` |
+| 繁體中文 | `/zh-hant/` | `content/xxx.zh-hant.md` |
+| English | `/en/` | `content/xxx.en.md` |
+
+- 语言配置：`config.toml` 的 `[languages.*]`；界面文案：`i18n/{zh-cn,zh-hant,en}.toml`
+- 首页数据：`data/homepage/{zh-cn,zh-hant,en}.yml`
+- 菜单只写一份（`[[menu.main]]`，`identifier` 作为 i18n 键自动翻译），内部链接自动带语言前缀
+- 繁体内容由 `just sync-hant`（`scripts/gen-hant.mjs` + OpenCC）从简体自动生成，**不要手改** `*.zh-hant.md`
+- 英文内容需手工维护 `*.en.md`
 
 ## 站点定制
 

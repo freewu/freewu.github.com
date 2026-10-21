@@ -1,0 +1,85 @@
+---
+banner:
+  title: Hi! I’m Bluefrog, A Programmer
+social:
+  twitter: _bluefrog
+  linkedin: ""
+  github: freewu
+  leetcode: freewu
+  gitlab: ""
+  facebook: ""
+  instagram: ""
+  gmail: bluefrog.wu
+  douban: bluefrog
+  weibo: wb1404
+about:
+  enable: true
+  content: 19 years as a full-stack developer in China
+skill:
+  enable: true
+  item:
+    - title: JavaScript
+      logo: ./images/lang/javascript.png
+      year: 19
+    - title: PHP
+      logo: ./images/lang/php.png
+      year: 19
+    - title: Golang
+      logo: ./images/lang/go.png
+      year: 10
+    - title: Java
+      logo: ./images/lang/java.png
+      year: 9
+    - title: Python
+      logo: ./images/lang/python.png
+      year: 12
+    - title: Rust
+      logo: ./images/lang/rust.svg
+      year: 3
+project:
+  enable: true
+  item:
+    - title: Magic Tools
+      logo: ./images/project/magic-tools.png
+      description: A cross-platform toolbox built with Tauri 2 + AntDesign — 134 developer tools in 9 categories.
+      link: https://freewu.github.io/magic-tools/
+      repo: https://github.com/freewu/magic-tools
+    - title: API Manager
+      logo: ./images/project/api-manager.png
+      description: A cross-platform client built with Tauri 2 + React + Vite for HTTP / GraphQL / WebSocket / Socket.IO API docs, testing and mocking.
+      link: https://freewu.github.io/api-manager/
+      repo: https://github.com/freewu/api-manager
+    - title: Cache Manager
+      logo: ./images/project/cache-manager.png
+      description: A cross-platform Redis / Memcached client built with Tauri 2 + Vue3 + Vite, with cluster support.
+      link: https://freewu.github.io/cache-manager/
+      repo: https://github.com/freewu/cache-manager
+    - title: Book Manager
+      logo: ./images/project/book-manager.png
+      description: A cross-platform local ebook manager built with Wails v2 + React + Vite, with built-in epub / pdf / mobi readers.
+      link: https://freewu.github.io/book-manager/
+      repo: https://github.com/freewu/book-manager
+    - title: DB Manager
+      logo: ./images/project/db-manager.png
+      description: A cross-platform RDB client built with Wails v2 + React + Vite, supporting MySQL / PostgreSQL / SQLite / MongoDB / TiDB / Doris.
+      link: https://freewu.github.io/db-manager/
+      repo: https://github.com/freewu/db-manager
+
+book:
+  enable: true
+  item:
+    - title: Chrome Extension Cookbook V3
+      logo: ./images/book/chrome-extension-cookbook-v3.jpg
+      description: A hands-on guide to Chrome extension development (Manifest V3).
+      link: https://freewu.github.io/chrome-extension-cookbook-v3/
+      repo: https://github.com/freewu/chrome-extension-cookbook-v3
+    - title: VSCode Extension Cookbook
+      logo: ./images/book/vscode-extension-cookbook.jpg
+      description: A hands-on guide to Visual Studio Code extension development.
+      link: https://freewu.github.io/vscode-extension-cookbook/
+      repo: https://github.com/freewu/vscode-extension-cookbook
+    - title: PHP8 Extension Cookbook
+      logo: ./images/book/php-extension-cookbook.jpg
+      description: A hands-on guide to PHP 8 extension development.
+      link: https://freewu.github.io/php-extension-cookbook/
+      repo: https://github.com/freewu/php-extension-cookbook

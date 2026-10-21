@@ -15,7 +15,7 @@
                             <div class="uk-width-expand">
                                 <h3 class="uk-card-title uk-margin-remove-bottom">{{.Title}}</h3>
                                 <p class="uk-text-meta uk-margin-remove-top"><time
-                                        datetime="{{.Date}}">{{.Date.Format "Jan 2, 2006"}}</time></p>
+                                        datetime="{{.Date}}">{{.Date.Format "2006-01-02"}}</time></p>
                             </div>
                         </div>
                     </div>
@@ -24,13 +24,16 @@
                     </div>
                 </div>
                     <div class="uk-card-footer">
-                        <a href="{{.Permalink | relURL}}" class="uk-button uk-button-text">Read more</a>
+                        <a href="{{.Permalink | relURL}}" class="uk-button uk-button-text">{{ i18n "read_more" }}</a>
                     </div>
                 </div>
             </div>
             {{end}}
 
         </div>
+        {{ if not .Data.Pages }}
+        <p class="uk-text-center uk-text-lead uk-margin-medium-top">{{ i18n "no_content" }}</p>
+        {{ end }}
 
     </div>
 </section>

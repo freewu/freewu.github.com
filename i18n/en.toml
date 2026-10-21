@@ -1,0 +1,35 @@
+# English UI strings
+about = "About"
+blog = "Blog"
+categories = "Categories"
+projects = "Projects"
+books = "Books"
+
+read_more = "Read more"
+no_content = "Nothing here yet."
+published_on = "Published on"
+reading_time = "About {{ .Count }} min read"
+built_with = "Built with"
+
+portfolio = "Portfolio"
+skills = "Skills"
+experience = "Experience"
+certifications = "Certifications"
+awards = "Awards and Achievements"
+hackathons = "Hackathons"
+education = "Education"
+publications = "Publications"
+
+find_out_more = "Find out more"
+try_online = "Live demo ↗"
+read_online = "Read online ↗"
+source_code = "Source"
+click_to_view_proof = "Click the images below to view the proof"
+hover_for_more = "Hover over the logos to find out more"
+years_experience = "{{ .Count }} years of experience with"
+
+team_project = "Team Project"
+website = "Website"
+github = "GitHub"
+
+switch_language = "Language"

@@ -11,6 +11,9 @@ set shell := ["bash", "-uc"]
 theme         := "hugo-developer-portfolio"          # 站点主题
 # hugo 可执行文件：优先 $HUGO，其次 hugo / hugo.exe（WSL 下自动使用 Windows 版）
 hugo          := env_var_or_default("HUGO", `command -v hugo || command -v hugo.exe || echo hugo`)
+# node / npm 可执行文件：用于 scripts/gen-hant.mjs 生成繁体内容
+node          := env_var_or_default("NODE", `command -v node || command -v node.exe || echo node`)
+npm           := env_var_or_default("NPM", `command -v npm || command -v npm.cmd || echo npm`)
 publish_dir   := "docs"                              # hugo publishDir（GitHub Pages 目录）
 origin_branch := "master"                            # 源码仓库主分支
 pages_repo    := "git@github.com:freewu/freewu.github.io.git"  # Pages 部署仓库
@@ -49,6 +52,7 @@ check:
     @echo "==> 依赖检查"
     @command -v git  >/dev/null 2>&1 && echo "  git  : $(git --version)" || { echo "  git  : ✗ 未安装"; exit 1; }
     @command -v {{hugo}} >/dev/null 2>&1 && echo "  hugo : $($(command -v {{hugo}}) version)  [$(command -v {{hugo}})]" || { echo "  hugo : ✗ 未安装（可执行  just install-hugo，或设置 HUGO=/path/to/hugo）"; exit 1; }
+    @command -v {{node}} >/dev/null 2>&1 && echo "  node : $($(command -v {{node}}) --version)  [$(command -v {{node}})]  (仅 just sync-hant 需要)" || echo "  node : ✗ 未安装（仅 just sync-hant 生成繁体内容时需要，可用 NODE=/path/to/node 指定）"
 
 # 通过 go install 安装 hugo
 [group('env')]
@@ -144,6 +148,18 @@ favicon src="logo.png":
 new name:
     {{hugo}} new "blog/{{name}}.md" -t {{theme}}
     @echo "==> 已创建 content/blog/{{name}}.md（记得修改 draft: false 后发布）"
+
+# 由简体内容自动生成繁体内容（OpenCC，需 Node.js；英文需手工维护）
+[group('content')]
+sync-hant *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [ ! -d "scripts/node_modules" ]; then
+        echo "==> 安装脚本依赖（opencc-js）"
+        {{npm}} --prefix scripts install --silent
+    fi
+    {{node}} scripts/gen-hant.mjs {{args}}
+    echo "==> 繁体内容已更新，记得重新执行 just build"
 
 # 新建页面: just new-page about-me
 [group('content')]

@@ -1,0 +1,35 @@
+# 繁體中文介面文案
+about = "關於"
+blog = "部落格"
+categories = "分類"
+projects = "專案"
+books = "書籍"
+
+read_more = "閱讀全文"
+no_content = "暫無內容"
+published_on = "發佈於"
+reading_time = "閱讀時間約 {{ .Count }} 分鐘"
+built_with = "技術棧"
+
+portfolio = "作品集"
+skills = "技能"
+experience = "工作經歷"
+certifications = "證書"
+awards = "獎項與成就"
+hackathons = "黑客馬拉松"
+education = "教育經歷"
+publications = "出版物"
+
+find_out_more = "瞭解更多"
+try_online = "線上體驗 ↗"
+read_online = "線上閱讀 ↗"
+source_code = "原始碼"
+click_to_view_proof = "點擊下方圖片查看證明"
+hover_for_more = "將滑鼠懸停在圖示上了解更多"
+years_experience = "{{ .Count }} 年使用經驗"
+
+team_project = "團隊專案"
+website = "網站"
+github = "GitHub"
+
+switch_language = "切換語言"

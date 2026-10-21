@@ -1,0 +1,35 @@
+# 简体中文界面文案
+about = "关于"
+blog = "博客"
+categories = "分类"
+projects = "项目"
+books = "书籍"
+
+read_more = "阅读全文"
+no_content = "暂无内容"
+published_on = "发布于"
+reading_time = "阅读时间约 {{ .Count }} 分钟"
+built_with = "技术栈"
+
+portfolio = "作品集"
+skills = "技能"
+experience = "工作经历"
+certifications = "证书"
+awards = "奖项与成就"
+hackathons = "黑客马拉松"
+education = "教育经历"
+publications = "出版物"
+
+find_out_more = "了解更多"
+try_online = "在线体验 ↗"
+read_online = "在线阅读 ↗"
+source_code = "源码"
+click_to_view_proof = "点击下方图片查看证明"
+hover_for_more = "将鼠标悬停在图标上了解更多"
+years_experience = "{{ .Count }} 年使用经验"
+
+team_project = "团队项目"
+website = "网站"
+github = "GitHub"
+
+switch_language = "切换语言"

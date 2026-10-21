@@ -7,6 +7,7 @@
 - 基于 [Hugo](https://gohugo.io/) 的个人站点，主题 `hugo-developer-portfolio`
 - 构建产物输出到 `docs/`（`config.toml` 中 `publishDir = "docs"`），由 **GitHub Pages** 发布
 - 任务统一用 [just](https://github.com/casey/just) 管理，见 `justfile`
+- **多语言**：简体中文（默认，根路径 `/`）、繁體中文（`/zh-hant/`）、English（`/en/`），顶部导航右侧 🌐 下拉切换
 - 源码仓库：`origin` = `https://github.com/freewu/freewu.github.com.git`（主分支 `master`）
 - 部署仓库（备用）：`git@github.com:freewu/freewu.github.io.git`
 
@@ -73,6 +74,7 @@ just                 # 列出所有命令
 just check           # 检查 git / hugo 依赖
 just serve [port]    # 本地预览 http://localhost:1313/
 just new <name>      # 新建文章 content/blog/<name>.md
+just sync-hant       # 由简体内容自动生成繁体内容（OpenCC，需 Node.js）
 just build           # 构建到 docs/（--minify，不清理 docs/）
 just verify          # 校验 docs/ 无开发模式链接（localhost:1313）
 just favicon         # 由根目录 logo.png 重新生成 favicon 到 static/
@@ -88,6 +90,25 @@ just status          # 查看改动与最近提交
 - **顶部导航支持两级菜单**：`config.toml` 的 `[[menu.main]]` 中，父级用 `identifier = "projects"`（`URL = "#"` 表示只展开不跳转），子项用 `parent = "projects"` 关联；外部链接（`https://...`）会新窗口打开。渲染在 `themes/hugo-developer-portfolio/layouts/partials/menu.html`：桌面端用 UIkit 下拉（`uk-navbar-dropdown`），手机侧边栏用 `uk-nav-sub` 二级列表。新增子项只需加一条带 `parent` 的菜单项。
 - **网站图标（favicon）**：源图是仓库根目录的 `logo.png`（正方形，2048x2048）。改动图标后执行 `just favicon` 重新生成 `static/favicon.ico`、`favicon-16x16.png`、`favicon-32x32.png`、`apple-touch-icon.png`、`android-chrome-{192,512}.png`、`site.webmanifest`（脚本：`scripts/gen-favicon.py`，需 Pillow），然后 `just build` 同步到 `docs/`。引用位置：主题 `partials/head.html`。
 
+## 多语言（简体 / 繁体 / English）
+
+站点使用 Hugo 原生多语言，三种语言共用一套模板：
+
+| 语言 | 配置 key | 路径 | 内容文件 |
+| --- | --- | --- | --- |
+| 简体中文（默认） | `zh-cn` | `/` | `content/xxx.md` |
+| 繁體中文 | `zh-hant` | `/zh-hant/` | `content/xxx.zh-hant.md` |
+| English | `en` | `/en/` | `content/xxx.en.md` |
+
+- 语言定义在 `config.toml` 的 `[languages.*]`（`label` / `locale` / `weight` / `params.home` / `params.languageLabel` / `params.description`）。默认语言不加子目录（`defaultContentLanguageInSubdir = false`），Hugo 会自动生成 `/zh-cn/` → `/` 的跳转别名。
+- **界面文案**在 `i18n/{zh-cn,zh-hant,en}.toml`，模板中用 `{{ i18n "key" }}` 取值；新增文案必须三份都补齐。
+- **菜单**只在 `config.toml` 的 `[[menu.main]]` 定义一份，`identifier` 同时作为 i18n 键（`about` / `blog` / `categories` / `projects` / `books`）自动翻译名称；内部链接用 `relLangURL` 自动加语言前缀（`partials/menu.html`）。
+- **语言切换器**：`partials/language-switcher.html`（桌面下拉 + 手机侧边栏）。优先跳到当前页面的同语言译文，该语言没有译文时回退到该语言首页；`partials/head.html` 会为每个页面输出 `hreflang` 链接（含 `x-default`）。
+- **首页数据**按语言拆分到 `data/homepage/zh-cn.yml`、`zh-hant.yml`、`en.yml`，`layouts/index.html` 用 `index hugo.Data.homepage site.Language.Lang` 读取。
+- **繁体内容是生成物**：`just sync-hant` 用 OpenCC（`scripts/gen-hant.mjs`，配置默认 `twp`，可用 `OPENCC_TO=tw|hk|twp` 覆盖）把简体内容转换成 `*.zh-hant.md`，**不要手改**。修改简体内容（或新增文章）后必须重新执行 `just sync-hant`，再 `just build`。首次运行会自动 `npm --prefix scripts install`（依赖 `opencc-js`，仅本地需要，CI 用不到）。
+- **英文内容需手工维护** `*.en.md`（front matter 的 `title` / `description` 也一并翻译）。
+- 新增一篇文章后，三份文件（`xxx.md`、`xxx.zh-hant.md`、`xxx.en.md`）都要存在，否则对应语言导航/列表会缺页。
+
 ## 目录说明
 
 ```
@@ -95,12 +116,15 @@ config.toml          站点配置（含 publishDir = docs）
 justfile             任务管理入口
 content/             文章与页面（Markdown）
 content/blog/        博客文章
+i18n/                界面文案（zh-cn / zh-hant / en）
+data/homepage/       首页数据（按语言拆分）
 content/about/       About 页面
 data/homepage.yml    首页数据
 static/images/       静态图片
 static/favicon*.png  网站图标（由 logo.png 生成，勿手改）
 logo.png             品牌源图（favicon 生成源）
-scripts/             辅助脚本（gen-favicon.py 等）
+scripts/             辅助脚本（gen-favicon.py、gen-hant.mjs 等）
+scripts/gen-hant.mjs 简体 → 繁体内容生成器（OpenCC，just sync-hant 调用）
 themes/hugo-developer-portfolio/   主题（含自定义 layouts 改动）
 docs/                构建产物（GitHub Pages 发布目录，需提交）
 .github/workflows/hugo.yml         CI：推送 master 后自动部署 Pages
@@ -111,4 +135,5 @@ build.sh              历史脚本（已过时，功能由 justfile 替代）
 
 - 回复与提交信息使用中文优先。
 - 修改主题 `layouts/` 属于源码改动，同样需要提交推送。
+- 新增/修改任何界面文案时，同步更新 `i18n/` 三个语言文件；内容改动后跑 `just sync-hant`，并确认 `*.en.md` 是否需要同步。
 - 发布流程：`just serve` 本地确认 → `just release "msg"` → GitHub Actions 自动部署。

@@ -1,0 +1,50 @@
+{{- /*
+  语言切换器（简体 / 繁体 / English）
+  参数：
+    page = 当前 Page
+    mode = "navbar"（顶部导航下拉）| "side"（手机侧边栏二级列表）
+  切换目标：优先当前页面对应语言的译文，没有则回退到该语言首页。
+*/ -}}
+{{- $page := .page -}}
+{{- $mode := .mode -}}
+{{- $curLang := $page.Language.Lang -}}
+{{- $links := dict -}}
+{{- range $page.AllTranslations -}}
+  {{- $links = merge $links (dict .Language.Lang .RelPermalink) -}}
+{{- end -}}
+{{- range site.Home.AllTranslations -}}
+  {{- if not (index $links .Language.Lang) -}}
+    {{- $links = merge $links (dict .Language.Lang .RelPermalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $label := site.Language.Params.languageLabel | default site.Language.Label -}}
+{{- if eq $mode "navbar" -}}
+<li>
+  <a style="font-size: 18px; text-transform: none" href="#" title="{{ i18n "switch_language" }}">🌐 {{ $label }}
+    <span style="font-size: 10px; opacity: .7">▾</span></a>
+  <div class="uk-navbar-dropdown">
+    <ul class="uk-nav uk-navbar-dropdown-nav">
+      {{- range hugo.Sites -}}
+        {{- $href := index $links .Language.Lang -}}
+        {{- if $href -}}
+      <li{{ if eq .Language.Lang $curLang }} class="uk-active"{{ end }}><a href="{{ $href }}" lang="{{ .Language.Lang }}"
+          hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a></li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+  </div>
+</li>
+{{- else -}}
+<li class="uk-parent">
+  <a style="font-size: 18px" href="#">{{ i18n "switch_language" }}</a>
+  <ul class="uk-nav-sub">
+    {{- range hugo.Sites -}}
+      {{- $href := index $links .Language.Lang -}}
+      {{- if $href -}}
+    <li{{ if eq .Language.Lang $curLang }} class="uk-active"{{ end }}><a href="{{ $href }}" lang="{{ .Language.Lang }}"
+        hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a></li>
+      {{- end -}}
+    {{- end -}}
+  </ul>
+</li>
+{{- end -}}

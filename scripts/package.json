@@ -1,0 +1,12 @@
+{
+  "name": "freewu.github.com-scripts",
+  "private": true,
+  "description": "站点辅助脚本依赖（仅本地使用，CI 构建不需要）",
+  "type": "module",
+  "scripts": {
+    "sync-hant": "node gen-hant.mjs"
+  },
+  "dependencies": {
+    "opencc-js": "^1.0.5"
+  }
+}

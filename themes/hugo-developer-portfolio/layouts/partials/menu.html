@@ -1,9 +1,11 @@
 {{- /*
-  导航菜单（支持两级）。带 children 的条目渲染为下拉菜单。
+  导航菜单（支持两级，多语言）。带 children 的条目渲染为下拉菜单。
   参数：
     page = 当前 Page（用于高亮当前栏目）
     mode = "navbar"（顶部导航）| "side"（手机侧边导航）
+  内部链接用 relLangURL 自动加语言前缀（如 /en/about/）；
   外部链接（http 开头）保持原样并新窗口打开；URL = "#" 视为纯父级（仅展开子菜单）。
+  菜单名：有 identifier 时按 i18n 键翻译，缺失则用 name。
 */ -}}
 {{- $page := .page -}}
 {{- $mode := .mode -}}
@@ -15,20 +17,24 @@
   {{- $href := $url -}}
   {{- $rel := "" -}}
   {{- if not (or $isExternal $isAnchor) -}}
-    {{- $href = $url | relURL -}}
-    {{- $rel = $url | relURL -}}
+    {{- $href = $url | relLangURL -}}
+    {{- $rel = $url | relLangURL -}}
+  {{- end -}}
+  {{- $name := .Name -}}
+  {{- with .Identifier -}}
+    {{- with i18n . -}}{{- $name = . -}}{{- end -}}
   {{- end -}}
   {{- $active := and (not $isExternal) (not $isAnchor) (ne $url "") (hasPrefix $cur $rel) -}}
   {{- if .HasChildren -}}
     {{- if eq $mode "navbar" -}}
       <li{{ if $active }} class="uk-active"{{ end }}>
-        <a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ .Name }} <span style="font-size: 10px; opacity: .7">▾</span></a>
+        <a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ $name }} <span style="font-size: 10px; opacity: .7">▾</span></a>
         <div class="uk-navbar-dropdown">
           <ul class="uk-nav uk-navbar-dropdown-nav">
             {{- range .Children -}}
               {{- $curl := .URL -}}
               {{- $chref := $curl -}}
-              {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relURL -}}{{- end -}}
+              {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relLangURL -}}{{- end -}}
               <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
             {{- end -}}
           </ul>
@@ -36,12 +42,12 @@
       </li>
     {{- else -}}
       <li class="uk-parent{{ if $active }} uk-active{{ end }}">
-        <a style="font-size: 18px" href="{{ $href }}">{{ .Name }}</a>
+        <a style="font-size: 18px" href="{{ $href }}">{{ $name }}</a>
         <ul class="uk-nav-sub">
           {{- range .Children -}}
             {{- $curl := .URL -}}
             {{- $chref := $curl -}}
-            {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relURL -}}{{- end -}}
+            {{- if not (hasPrefix $curl "http") -}}{{- $chref = $curl | relLangURL -}}{{- end -}}
             <li><a href="{{ $chref }}"{{ if hasPrefix $curl "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
           {{- end -}}
         </ul>
@@ -49,9 +55,9 @@
     {{- end -}}
   {{- else -}}
     {{- if eq $mode "navbar" -}}
-      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ .Name }}</a></li>
+      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px; text-transform: none" href="{{ $href }}">{{ $name }}</a></li>
     {{- else -}}
-      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px" href="{{ $href }}">{{ .Name }}</a></li>
+      <li{{ if $active }} class="uk-active"{{ end }}><a style="font-size: 18px" href="{{ $href }}">{{ $name }}</a></li>
     {{- end -}}
   {{- end -}}
 {{- end -}}
