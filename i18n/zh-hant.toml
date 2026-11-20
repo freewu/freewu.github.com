@@ -4,6 +4,7 @@ blog = "部落格"
 categories = "分類"
 projects = "專案"
 books = "書籍"
+apps = "應用"
 
 read_more = "閱讀全文"
 no_content = "暫無內容"

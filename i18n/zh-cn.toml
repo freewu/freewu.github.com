@@ -4,6 +4,7 @@ blog = "博客"
 categories = "分类"
 projects = "项目"
 books = "书籍"
+apps = "应用"
 
 read_more = "阅读全文"
 no_content = "暂无内容"

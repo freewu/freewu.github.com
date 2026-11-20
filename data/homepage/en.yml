@@ -83,3 +83,27 @@ book:
       description: A hands-on guide to PHP 8 extension development.
       link: https://freewu.github.io/php-extension-cookbook/
       repo: https://github.com/freewu/php-extension-cookbook
+
+app:
+  enable: true
+  item:
+    - title: Daily Poetry
+      logo: /images/app/daily-poetry.png
+      description: A daily Chinese poetry app built with React Native — one poem a day, with search and favourites.
+      link: https://freewu.github.io/daily-poetry/
+      repo: https://github.com/freewu/daily-poetry
+    - title: Engineering Assistant
+      logo: /images/app/engineering-assistant.png
+      description: An engineering calculator toolkit built with Flutter for everyday field and design calculations.
+      link: https://freewu.github.io/engineering-assistant/
+      repo: https://github.com/freewu/engineering-assistant
+    - title: Free Calculator
+      logo: /images/app/free-clac.png
+      description: An advanced scientific calculator built with Flutter, with history and unit conversion.
+      link: https://freewu.github.io/free-clac/
+      repo: https://github.com/freewu/free-clac
+    - title: Magic Tools
+      logo: /images/app/magic-tools.jpg
+      description: A cross-platform toolbox built with Tauri 2 + AntDesign — 161 developer tools in 9 categories.
+      link: https://freewu.github.io/magic-tools/
+      repo: https://github.com/freewu/magic-tools

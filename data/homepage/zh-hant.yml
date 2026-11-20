@@ -83,3 +83,27 @@ book:
       description: PHP 8 擴充功能開發實戰手冊。
       link: https://freewu.github.io/php-extension-cookbook/
       repo: https://github.com/freewu/php-extension-cookbook
+
+app:
+  enable: true
+  item:
+    - title: Daily Poetry
+      logo: /images/app/daily-poetry.png
+      description: 使用 React Native 開發的每日詩詞 APP，每天一首詩，支援檢索與收藏。
+      link: https://freewu.github.io/daily-poetry/
+      repo: https://github.com/freewu/daily-poetry
+    - title: Engineering Assistant
+      logo: /images/app/engineering-assistant.png
+      description: 使用 Flutter 開發的工程人員計算工具集，覆蓋日常現場與設計計算。
+      link: https://freewu.github.io/engineering-assistant/
+      repo: https://github.com/freewu/engineering-assistant
+    - title: Free Calculator
+      logo: /images/app/free-clac.png
+      description: 使用 Flutter 開發的高階科學計算器，支援歷史記錄與單位換算。
+      link: https://freewu.github.io/free-clac/
+      repo: https://github.com/freewu/free-clac
+    - title: Magic Tools
+      logo: /images/app/magic-tools.jpg
+      description: 使用 Tauri 2 + AntDesign 開發的跨平台工具集，9 大類 161 款開發者工具。
+      link: https://freewu.github.io/magic-tools/
+      repo: https://github.com/freewu/magic-tools

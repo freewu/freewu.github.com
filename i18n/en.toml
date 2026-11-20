@@ -4,6 +4,7 @@ blog = "Blog"
 categories = "Categories"
 projects = "Projects"
 books = "Books"
+apps = "Apps"
 
 read_more = "Read more"
 no_content = "Nothing here yet."

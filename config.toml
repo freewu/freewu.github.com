@@ -159,6 +159,41 @@ defaultContentLanguageInSubdir = false
     URL = "https://freewu.github.io/php-extension-cookbook/"
     weight = 3
 
+  # ── 二级菜单：Apps ─────────────────────────────────────────────
+  [[menu.main]]
+    name = "Apps"
+    identifier = "apps"
+    URL = "#"
+    weight = 6
+
+  [[menu.main]]
+    name = "Daily Poetry"
+    identifier = "app-daily-poetry"
+    parent = "apps"
+    URL = "https://freewu.github.io/daily-poetry/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Engineering Assistant"
+    identifier = "app-engineering-assistant"
+    parent = "apps"
+    URL = "https://freewu.github.io/engineering-assistant/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Free Calculator"
+    identifier = "app-free-clac"
+    parent = "apps"
+    URL = "https://freewu.github.io/free-clac/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Magic Tools"
+    identifier = "app-magic-tools"
+    parent = "apps"
+    URL = "https://freewu.github.io/magic-tools/"
+    weight = 4
+
 
 # ═══════════════════════════════════════════════════════════════
 #  全局参数（各语言通用）
